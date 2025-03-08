@@ -1,0 +1,23 @@
+{
+  "header": {
+    "title": "Albert Einstein",
+    "subtitle": "In Pursuit of Light"
+  },
+  "subheader": {
+    "description": "The most incomprehensible thing about the universe is that it is comprehensible."
+  },
+  "about": {
+    "sectionTitle": "In Pursuit of Light, an exhibition of Albert Einstein's work",
+    "paragraph": "In the age of deepfakes and generative artificial intelligence, the reliability of our sensory perceptions is at risk..."
+  },
+  "faq": [
+    {
+      "question": "How long is the exhibition?",
+      "answer": "The exhibition lasts about 1 hour, but you can spend more time depending on your interest."
+    },
+    {
+      "question": "Do I need to reserve in advance?",
+      "answer": "Yes, entry is free, but reservation is mandatory."
+    }
+  ]
+}

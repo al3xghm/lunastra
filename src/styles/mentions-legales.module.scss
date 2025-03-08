@@ -1,0 +1,35 @@
+.ml {
+    display: flex;
+    justify-content: start;
+    height: 100%;
+    padding: 4rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    gap: 1rem;
+
+    h1 {
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
+
+    p {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    li {
+        list-style: none;
+    }
+}

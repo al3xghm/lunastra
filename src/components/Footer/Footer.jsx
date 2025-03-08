@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import styles from "./Footer.module.scss";
+import Image from "next/image";
 
 // Charger Leaflet dynamiquement pour éviter les erreurs SSR
 const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
@@ -37,22 +38,25 @@ const Footer = () => {
         </div>
 
         <div className={styles.footer__agency}>
-          <h3>Une exposition immersive exclusive</h3>
-          <p>Proposée par <span className={styles.footer__agencyName}>★ Lunastra</span></p>
+          <h3>Une exposition immersive exclusive proposée par ★ Lunastra</h3>
           <p>Lunastra est une agence de communication spécialisée dans la culture de l’univers et de l’espace</p>
 
           <div className={styles.footer__socials}>
-            <p>Retrouvez nous sur :</p>
-            <a href="#" aria-label="Instagram">📷</a>
-            <a href="#" aria-label="X (Twitter)">✖</a>
-            <a href="#" aria-label="Email">✉</a>
+            <p>Retrouvez nous sur</p>
+            <div className={styles.footer__socials__links}>
+            <a href="#" aria-label="Instagram"><Image src="/instagram.svg" alt="Instagram" width={25} height={25} /></a>
+            <a href="#" aria-label="X (Twitter)"><Image src="/X.svg" alt="X" width={25} height={25} /></a>
+            <a href="#" aria-label="Email"><Image src="/Mail.svg" alt="Email" width={25} height={25} /></a>
+            </div>
           </div>
         </div>
       </div>
 
       <div className={styles.footer__bottom}>
-        <a href="#">Mentions légales</a>
-        <a href="#">Politique de confidentialité</a>
+        <div className={styles.footer__bottom__links}>
+        <a href="mentions-legales">Mentions légales</a>
+        <a href="conditions-generales-de-vente">Conditions générales de vente</a>
+        </div>
         <p>© 2025, Lunastra, Tous droits réservés</p>
       </div>
     </footer>

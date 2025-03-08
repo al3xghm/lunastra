@@ -15,24 +15,29 @@
     &__content {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      max-width: 1200px;
       width: 100%;
-      padding: 1rem 0;
+      padding: 2rem;
+      gap: 10%;
     }
 
     &__info{
-      p:nth-child(2) {
-        color: black;
+      p:nth-of-type(3){
+        color: rgb(164, 164, 164);
       }
     }
   
     &__info,
     &__agency {
-      flex: 1;
-      min-width: 300px;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+      max-width: 900px;
+    
+    }
 
+    &__agency {
+
+      p{
+        margin-top: 1rem;
+      }
     }
   
     h3 {
@@ -41,29 +46,44 @@
     }
   
     &__socials {
-      margin-top: 1rem;
+      margin-top: 2rem;
+
+      p{
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
   
       a {
         color: #fff;
         font-size: 1.5rem;
         text-decoration: none;
       }
+
+      &__links {
+        display: flex;
+        margin-top: 1rem;
+        gap: 2rem;
+      }
     }
+    
   
     &__bottom {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 2rem;
-      border-top: 1px solid #444;
-      padding-top: 1rem;
       width: 100%;
+      justify-content: space-between;
+      padding: 2rem;
       text-align: center;
   
       a {
         color: #fff;
         text-decoration: none;
         margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      &__links {
+        display: flex;
+        gap: 2rem;
       }
     }
 

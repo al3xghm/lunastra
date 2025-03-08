@@ -58,8 +58,22 @@ a {
   text-decoration: none;
 }
 
+button, input, textarea, select, a, option, optgroup {
+  font-family: inherit;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+.button {
+  width: fit-content;
+  height: fit-content;
+  background-color: white;
+  color: black;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
 }

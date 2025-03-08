@@ -1,0 +1,26 @@
+{
+  "home": {
+    "header": {
+      "title": "Albert Einstein",
+      "subtitle": "A la poursuite de la lumiere"
+    },
+    "subheader": {
+        "title": "Une exposition immersive aux frontières du savoir",
+      "description": "La chose la plus incompréhensible de l'univers est qu'il est compréhensible." 
+    },
+    "about": {
+      "sectionTitle": "In Pursuit of Light, an exhibition of Albert Einstein's work",
+      "paragraph": "In the age of deepfakes and generative artificial intelligence, the reliability of our sensory perceptions is at risk..."
+    },
+    "faq": [
+      {
+        "question": "How long is the exhibition?",
+        "answer": "The exhibition lasts about 1 hour, but you can spend more time depending on your interest."
+      },
+      {
+        "question": "Do I need to reserve in advance?",
+        "answer": "Yes, entry is free, but reservation is mandatory."
+      }
+    ]
+  }
+}
