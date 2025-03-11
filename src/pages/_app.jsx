@@ -1,12 +1,22 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useEffect } from 'react';
 import '@/styles/globals.scss';
 import 'leaflet/dist/leaflet.css';
 
 export default function App({ Component, pageProps }) {
-    const { locale } = useRouter();
-    
+    const router = useRouter();
+    const { locale } = router;
+    const { push } = router;
+
+    useEffect(() => {
+        const storedLocale = localStorage.getItem('locale');
+        if (storedLocale && storedLocale !== locale) {
+            push(window.location.pathname, window.location.search, { locale: storedLocale });
+        }
+    }, [locale]);
+
     return (
         <>
             <Head>

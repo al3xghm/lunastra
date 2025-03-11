@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export const Navbar = () => {
+
+    const t = useTranslations('home');
     return (
         <nav className={styles.navbar}>
             <div className={styles.section}>
@@ -12,9 +15,7 @@ export const Navbar = () => {
             </div>
             <div className={styles.section}>
                 <p>
-                    25 Mai
-                    <br />
-                    - 21 Juin
+                    {t('navbar.date')}
                 </p>
             </div>
             <div className={styles.section}>
@@ -26,8 +27,8 @@ export const Navbar = () => {
             </div>
 
             <div className={styles.links}>
-                <Link href="/billetterie">Billetterie →</Link>
-                <Link href="/expo">Exposition interactive →</Link>
+                <Link href="/billetterie">{t('navbar.ticketing')} →</Link>
+                <Link href="/expo">{t('navbar.exhibition')} →</Link>
             </div>
         </nav>
     );

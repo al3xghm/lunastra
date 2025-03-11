@@ -1,26 +1,148 @@
 {
   "home": {
+    "navbar": {
+      "date": "25 Mai - 21 Juin",
+      "ticketing": "Billetterie",
+      "exhibition": "Exposition interactive"
+    },
+    "footer": {
+      "title": "Albert Einstein,",
+      "title2": "à la poursuite de la lumière",
+      "date": "25 Mai au 21 Juin 2025",
+      "address": "2 Rue Albert Einstein,",
+      "entryInfo": "Entrée gratuite sur réservation",
+      "exhibitionTitle": "Une exposition immersive exclusive proposée par ★ Lunastra",
+      "agencyDescription": "Lunastra est une agence de communication spécialisée dans la culture de l’univers et de l’espace",
+      "socialsTitle": "Retrouvez nous sur",
+      "copyright": "© 2025, Lunastra, Tous droits réservés",
+      "legalNotice": "Mentions légales",
+      "privacyPolicy": "Politique de confidentialité"
+    },
     "header": {
       "title": "Albert Einstein",
-      "subtitle": "A la poursuite de la lumiere"
+      "subtitle": "À la poursuite de la lumière"
     },
     "subheader": {
-        "title": "Une exposition immersive aux frontières du savoir",
-      "description": "La chose la plus incompréhensible de l'univers est qu'il est compréhensible." 
+      "title": "Une exposition immersive aux frontières du savoir",
+      "description": "La chose la plus incompréhensible à propos de l'univers, c'est qu'il est compréhensible."
     },
     "about": {
-      "sectionTitle": "In Pursuit of Light, an exhibition of Albert Einstein's work",
-      "paragraph": "In the age of deepfakes and generative artificial intelligence, the reliability of our sensory perceptions is at risk..."
+      "sectionTitle": "À la poursuite de la lumière, une exposition des travaux d'Albert Einstein",
+      "paragraph": "À l'ère des deepfakes et de l'intelligence artificielle générative, la fiabilité de nos perceptions sensorielles est mise à mal. Nous vivons désormais dans une société post-vérité où la frontière entre réalité et illusion s'estompe progressivement. Les technologies de pointe inondent nos flux d'actualités de spéculations non vérifiables, souvent générées par des algorithmes anonymes. \n\nNotre présence en ligne est devenue une mise en scène méticuleusement orchestrée, un reflet de la société du selfie. Les réseaux sociaux prospèrent grâce à l'auto-promotion et à la recherche incessante de validation à travers les likes et les abonnés. Le contenu que nous consommons et créons est toujours plus standardisé sous l'effet des influenceurs et des algorithmes, créant une disjonction entre nos personas numériques et nos identités authentiques.",
+      "ticketInfo": "Entrée gratuite sur réservation",
+      "allaudience": "Tous public",
+      "reserveButton": "Réservez vos places",
+      "imgfooter": "Albert Einstein, né le 14 mars 1879 à Ulm."
+    },
+    "experience": {
+      "titlePart1": "Plongez-vous",
+      "titlePart2": "au cœur d'une",
+      "titlePart3": "expérience",
+      "titlePart4": "immersive",
+      "descriptionTitle": "L'exposition \"À la poursuite de la lumière\" vous invite à explorer les travaux d'Albert Einstein à travers une expérience immersive et interactive.",
+      "descriptionBody": "Plongez-vous au cœur de la relativité générale et de la théorie des quanta, et découvrez les révolutions scientifiques qui ont marqué le XXe siècle.",
+      "exploreButton": "Découvrir l'exposition interactive",
+      "carouselSubtitle": "Venez vivre les découvertes d'Albert Einstein à travers une exposition immersive,",
+      "carouselSubtitle2": "à quelques minutes de Paris"
     },
     "faq": [
       {
-        "question": "How long is the exhibition?",
-        "answer": "The exhibition lasts about 1 hour, but you can spend more time depending on your interest."
+        "question": "Quelle est la durée de l'exposition ?",
+        "answer": "La durée de l'exposition est d'environ 1 heure, mais vous pouvez y passer plus de temps selon votre intérêt."
       },
       {
-        "question": "Do I need to reserve in advance?",
-        "answer": "Yes, entry is free, but reservation is mandatory."
+        "question": "Faut-il réserver à l'avance ?",
+        "answer": "Oui, l'entrée est gratuite, mais la réservation est obligatoire."
+      },
+      {
+        "question": "Quels sont les horaires d'ouverture ?",
+        "answer": "L'exposition est ouverte tous les jours de 10h à 18h."
+      },
+      {
+        "question": "Quel est le tarif de l'entrée ?",
+        "answer": "L'entrée est gratuite."
       }
-    ]
+    ],
+    "legal": {
+      "title": "Mentions légales",
+      "company": "Nom de l'entreprise — Lunastra",
+      "status": "Statut juridique — Association loi de 1901",
+      "address": "Adresse — 2 Rue Albert Einstein, 77420 Champs-sur-Marne",
+      "email": "Adresse e-mail — lunastra.contact@gmail.com",
+      "director": "Directeur de la publication — Alexandre Ghmir",
+      "host": "Hébergeur — VERCEL, dont le siège social est situé VERCEL INTERNATIONAL LTD, 61 Lordou Vironos Street, 6023 Larnaca, Chypre, joignable par le moyen suivant : vercel.com/contact.",
+        "privacyPolicy": {
+          "title": "Politique de confidentialité",
+          "description": "Lunastra est attachée à la protection des données personnelles de ses utilisateurs. Cette politique de confidentialité décrit comment nous collectons, utilisons et partageons les données personnelles que vous nous fournissez.",
+          "sections": [
+            {
+              "title": "Collecte des données personnelles",
+              "content": "Nous collectons des données personnelles lorsque vous nous contactez ou réservez un billet. Les données que nous collectons peuvent inclure votre nom, votre prénom ou votre adresse e-mail."
+            },
+            {
+              "title": "Utilisation des données personnelles",
+              "content": "Nous utilisons vos données personnelles pour répondre à vos demandes, confirmer vos réservations ou vous informer sur nos services. Nous ne vendons pas vos données personnelles à des tiers."
+            },
+            {
+              "title": "Partage des données personnelles",
+              "content": "Nous ne partageons pas vos données personnelles avec des tiers, sauf si cela est nécessaire pour répondre à une demande spécifique que vous avez formulée."
+            },
+            {
+              "title": "Durée de conservation des données personnelles",
+              "content": "Nous conservons vos données personnelles aussi longtemps que nécessaire pour répondre à votre demande. Nous supprimons les données personnelles de nos systèmes dès qu'elles ne sont plus nécessaires."
+            },
+            {
+              "title": "Sécurité des données personnelles",
+              "content": "Nous prenons des mesures pour protéger vos données personnelles contre la perte, le vol, l'utilisation abusive ou l'accès non autorisé. Nous utilisons des mesures de sécurité telles que le cryptage des données et la mise en place de politiques de mot de passe robustes pour protéger vos données."
+            },
+            {
+              "title": "Droit d'accès et de rectification des données personnelles",
+              "content": "Vous avez le droit de demander l'accès et la rectification de vos données personnelles. Pour ce faire, veuillez nous contacter à l'adresse e-mail divart.contact@gmail.com ou à l'adresse postale indiquée ci-dessus (voir mentions légales)."
+            },
+            {
+              "title": "Modification de la politique de confidentialité",
+              "content": "Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Les modifications apportées seront publiées sur cette page."
+            },
+            {
+              "title": "Nous contacter",
+              "content": "Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité ou l'utilisation de vos données personnelles, veuillez nous contacter à l'adresse e-mail ou à l'adresse postale indiquée ci-dessus (voir mentions légales)."
+            }
+          ]
+        }      
+    },
+    "cgv": {
+      "title": "Conditions Générales de Vente",
+      "intro": "Les présentes conditions générales de vente (CGV) définissent les modalités de distribution et de réservation des billets pour l'exposition d'art gratuite.",
+      "sections": [
+        {
+          "title": "Gratuité des billets",
+          "content": "Les billets pour l'exposition sont gratuits. Ils ne peuvent être vendus mais peuvent être réservés en ligne ou obtenus sur place, sous réserve des places disponibles."
+        },
+        {
+          "title": "Réservation des billets",
+          "content": "La réservation peut être effectuée en ligne sur notre site ou sur celui de l'organisateur. Les billets réservés sont disponibles à l’entrée de l'exposition, imprimés ou sur smartphone."
+        },
+        {
+          "title": "Conditions d'accès",
+          "content": "L’entrée est soumise à la présentation d’un billet valable pour la date et l'heure sélectionnées. L'organisateur peut refuser l’accès en cas de non-respect des règles de sécurité."
+        },
+        {
+          "title": "Annulation de la visite",
+          "content": "En cas d'annulation pour raison de sécurité ou force majeure, les visiteurs seront informés par email ou téléphone. L'organisateur ne pourra être tenu responsable des dommages causés."
+        },
+        {
+          "title": "Responsabilité",
+          "content": "L'organisateur décline toute responsabilité en cas de dommages subis par les visiteurs ou leurs biens lors de l'exposition."
+        },
+        {
+          "title": "Modification des CGV",
+          "content": "Ces CGV peuvent être modifiées à tout moment. Les nouvelles conditions s'appliqueront aux réservations effectuées après publication."
+        },
+        {
+          "title": "Droit applicable",
+          "content": "Les présentes CGV sont soumises au droit français. Tout litige sera soumis aux tribunaux compétents de France."
+        }
+      ]
+    }
   }
 }
