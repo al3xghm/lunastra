@@ -77,3 +77,14 @@ button, input, textarea, select, a, option, optgroup {
   font-size: 1.25rem;
   font-weight: 600;
 }
+
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+  filter: grayscale(100%) brightness(40%) contrast(200%);
+}
+
+.leaflet-control-attribution {
+  display: none !important;
+}

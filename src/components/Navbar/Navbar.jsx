@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import SwitchLanguage from '../SwitchLanguage/SwitchLanguage';
 
 export const Navbar = () => {
 
@@ -24,6 +25,9 @@ export const Navbar = () => {
                     <br />
                     Champs-sur-Marne
                 </p>
+            </div>
+            <div className={styles.section}>
+                <SwitchLanguage />
             </div>
 
             <div className={styles.links}>

@@ -11,8 +11,8 @@ const SwitchLanguage = () => {
     setCurrentLang(storedLang);
   }, [router.locale]);
 
-  const toggleLanguage = () => {
-    const newLang = currentLang === 'fr' ? 'en' : 'fr';
+  const handleChangeLanguage = (event) => {
+    const newLang = event.target.value;
     localStorage.setItem('locale', newLang);
     setCurrentLang(newLang);
     router.push(router.pathname, router.asPath, { locale: newLang });
@@ -20,9 +20,10 @@ const SwitchLanguage = () => {
 
   return (
     <div className={styles.switchLanguage}>
-      <button onClick={toggleLanguage} className={styles.languageButton}>
-        {currentLang === 'fr' ? '🇫🇷' : '🇬🇧'}
-      </button>
+      <select value={currentLang} onChange={handleChangeLanguage} className={styles.languageSelect}>
+        <option value="fr">🇫🇷  Français</option>
+        <option value="en">🇬🇧  English</option>
+      </select>
     </div>
   );
 };

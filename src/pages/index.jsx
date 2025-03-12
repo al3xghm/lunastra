@@ -5,8 +5,8 @@ import Footer from "@/components/Footer/Footer";
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Head from "next/head";
-import SwitchLanguage from "@/components/SwitchLanguage/SwitchLanguage.jsx";
 import { useTranslations } from 'next-intl';
+
 
 const images = [
   '/logo.png',
@@ -36,7 +36,6 @@ export default function Home() {
         <title>Albert Einstein, à la poursuite de la lumière</title>
         <meta name="description" content="Une exposition immersive aux frontières du savoir" />
       </Head>
-      <SwitchLanguage />
       <Navbar />
       <header className={styles.header}>
         <h1 className="aurora">Albert
