@@ -103,7 +103,7 @@ export default function Home() {
         <h1 className={styles.title}>
           <span>{t('experience.titlePart1')}</span>
           <span>{t('experience.titlePart2')}</span>
-          <span>{t('experience.titlePart3')}</span>
+          <span className="aurora">{t('experience.titlePart3')}</span>
           <span>{t('experience.titlePart4')}</span>
         </h1>
         <Image className={styles.video} src="/background.png" alt="Experience" width={500} height={500} />

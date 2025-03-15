@@ -148,7 +148,6 @@
       "thanks": {
         
           "title": "Merci pour votre réservation!",
-          "subtitle": "Votre réservation a bien été enregistrée.",
           "content1": "Un accusé de réception contenant les détails de votre commande a été envoyé à l'adresse e-mail fournie.",
           "content2": "Vérifiez vos dossiers de spam ! Veuillez le conserver pour vos dossiers."
         
@@ -156,7 +155,6 @@
       "error": {
         
           "title": "Erreur lors de la réservation",
-          "subtitle": "Votre réservation n'a pas pu être enregistrée.",
           "content1": "Veuillez réessayer ultérieurement ou contacter le service client pour obtenir de l'aide.",
           "content2": "Nous nous excusons pour la gêne occasionnée."
         

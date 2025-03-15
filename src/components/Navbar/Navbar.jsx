@@ -32,7 +32,7 @@ export const Navbar = () => {
 
             <div className={styles.links}>
                 <Link href="/billetterie">{t('navbar.ticketing')} →</Link>
-                <Link href="/expo">{t('navbar.exhibition')} →</Link>
+                <Link href="/exposition">{t('navbar.exhibition')} →</Link>
             </div>
         </nav>
     );
