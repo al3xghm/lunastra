@@ -23,7 +23,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: rgb(23, 23, 23);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -79,8 +79,6 @@ button, input, textarea, select, a, option, optgroup {
 }
 
 .leaflet-layer,
-.leaflet-control-zoom-in,
-.leaflet-control-zoom-out,
 .leaflet-control-attribution {
   filter: grayscale(100%) brightness(40%) contrast(200%);
 }

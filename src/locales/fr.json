@@ -97,7 +97,7 @@
             },
             {
               "title": "Droit d'accès et de rectification des données personnelles",
-              "content": "Vous avez le droit de demander l'accès et la rectification de vos données personnelles. Pour ce faire, veuillez nous contacter à l'adresse e-mail divart.contact@gmail.com ou à l'adresse postale indiquée ci-dessus (voir mentions légales)."
+              "content": "Vous avez le droit de demander l'accès et la rectification de vos données personnelles. Pour ce faire, veuillez nous contacter à l'adresse e-mail lunastra.contact@gmail.com ou à l'adresse postale indiquée ci-dessus (voir mentions légales)."
             },
             {
               "title": "Modification de la politique de confidentialité",
@@ -143,6 +143,26 @@
           "content": "Les présentes CGV sont soumises au droit français. Tout litige sera soumis aux tribunaux compétents de France."
         }
       ]
+    },
+    "end": {
+      "thanks": {
+        
+          "title": "Merci pour votre réservation!",
+          "subtitle": "Votre réservation a bien été enregistrée.",
+          "content1": "Un accusé de réception contenant les détails de votre commande a été envoyé à l'adresse e-mail fournie.",
+          "content2": "Vérifiez vos dossiers de spam ! Veuillez le conserver pour vos dossiers."
+        
+      },
+      "error": {
+        
+          "title": "Erreur lors de la réservation",
+          "subtitle": "Votre réservation n'a pas pu être enregistrée.",
+          "content1": "Veuillez réessayer ultérieurement ou contacter le service client pour obtenir de l'aide.",
+          "content2": "Nous nous excusons pour la gêne occasionnée."
+        
+      },
+      "backtohome": "Retour à l'accueil"
+      }
     }
   }
-}
+

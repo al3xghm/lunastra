@@ -6,19 +6,24 @@ import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Head from "next/head";
 import { useTranslations } from 'next-intl';
+import ThreeBackground from "@/components/ThreeBackground";
 
 
-const images = [
-  '/logo.png',
-  '/logo.png',
-  '/logo.png',
-  '/logo.png',
-  '/logo.png'
-];
+
 
 export default function Home() {
   const [activeQuestion, setActiveQuestion] = useState(null);
+  const [activeImage, setActiveImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const t = useTranslations('home');
+
+  const images = [
+    { src: '/slider1.webp', description: 'Description de l’image 1' },
+    { src: '/slider2.webp', description: 'Ancien manuscrit rédigé par Albert Einstein' },
+    { src: '/slider3.webp', description: 'Chandrasekhar Subrahmanyan devant ses instruments, éclipse de 1919' },
+    { src: '/slider4.webp', description: 'Description de l’image 4' },
+    { src: '/slider5.webp', description: 'Résidence de Caputh, lieu de réflexion' }
+  ];
 
   const faqData = t('faq', { default: {} });
 
@@ -28,7 +33,15 @@ export default function Home() {
     setActiveQuestion(activeQuestion === index ? null : index); 
   };
 
+  const openModal = (image) => {
+    setActiveImage(image);
+    setIsModalOpen(true);
+  };
 
+  const closeModal = () => {
+    setActiveImage(null);
+    setIsModalOpen(false);
+  };
 
   return (
     <>
@@ -43,6 +56,7 @@ export default function Home() {
         <h2>
           {t('header.subtitle')}
         </h2>
+        <ThreeBackground />
       </header>
       <section className={styles.subheader}>
         <h3>{t('subheader.title')}</h3>
@@ -109,10 +123,12 @@ export default function Home() {
             <Image
               className={styles.card}
               key={index}
-              src={image}
+              src={image.src}
               alt="Carousel"
               width={500}
               height={500}
+              onClick={() => openModal(image)}
+              style={{ cursor: 'pointer' }}
             />
           ))}
         </div>
@@ -139,6 +155,22 @@ export default function Home() {
         </div>
       </section>
       <Footer />
+
+      {/* Modale d'agrandissement */}
+      {isModalOpen && activeImage && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <button className={styles.closeButton} onClick={closeModal}>✕</button>
+            <Image
+              src={activeImage.src}
+              alt="Agrandissement"
+              width={800}
+              height={800}
+            />
+            <p className={styles.description}>{activeImage.description}</p>
+          </div>
+        </div>
+      )}
     </>
   );
 }

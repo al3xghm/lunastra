@@ -97,7 +97,7 @@
           },
           {
             "title": "Right of access and rectification of personal data",
-            "content": "You have the right to request access and rectification of your personal data. To do so, please contact us at the email address divart.contact@gmail.com or the postal address listed above (see legal notices)."
+            "content": "You have the right to request access and rectification of your personal data. To do so, please contact us at the email address lunastra.contact@gmail.com or the postal address listed above (see legal notices)."
           },
           {
             "title": "Changes to the privacy policy",
@@ -143,6 +143,24 @@
           "content": "These T&Cs are governed by French law. Any dispute will be submitted to the competent courts in France."
         }
       ]
+    },
+    "end": {
+      "thanks": {
+        
+          "title": "Thank you for your reservation!",
+          "subtitle": "Your reservation has been successfully registered.",
+          "content1": "A confirmation receipt containing the details of your order has been sent to the provided email address.",
+          "content2": "Check your spam folders! Please keep it for your records."        
+      },
+      "error": {
+        
+          "title": "Oops! Something went wrong.",
+          "subtitle": "Your reservation could not be saved.",
+          "content1": "Please try again later or contact customer service for assistance.",
+          "content2": "We apologize for the inconvenience."        
+      },
+      "backtohome": "Back to home"
+      }
     }
   }
-}
+
