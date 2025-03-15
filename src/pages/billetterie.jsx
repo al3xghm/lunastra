@@ -9,7 +9,7 @@ export default function Billetterie() {
     const [formData, setFormData] = useState({
         date: '',
         horaire: '',
-        amount: '',
+        amount: 1,
         prenom: '',
         nom: '',
         email: ''
@@ -24,40 +24,37 @@ export default function Billetterie() {
         }));
     };
 
+    const increment = () => {
+        setFormData((prev) => ({
+            ...prev,
+            amount: Math.min(10, parseInt(prev.amount, 10) + 1)
+        }));
+    };
+
+    const decrement = () => {
+        setFormData((prev) => ({
+            ...prev,
+            amount: Math.max(1, parseInt(prev.amount, 10) - 1)
+        }));
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
-    
-        const formData = {
-            date: event.target.date.value,
-            horaire: event.target.horaire.value,
-            amount: event.target.amount.value,
-            prenom: event.target.prenom.value,
-            nom: event.target.nom.value,
-            email: event.target.email.value,
-        };
-    
         try {
             const response = await fetch('http://127.0.0.1:8888/lunastra_api/index.php', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
-    
-            const data = await response.json();
             
             if (response.ok) {
-                // Redirection vers la page de confirmation après une réservation réussie
-                window.location.href = '/merci';  // Rediriger vers la page 'merci'
+                window.location.href = '/merci';
             } else {
-                // Redirection vers la page d'erreur en cas de problème
-                window.location.href = '/erreur';  // Rediriger vers la page 'erreur'
+                window.location.href = '/erreur';
             }
         } catch (error) {
             console.error('Erreur:', error);
-            // Redirection vers la page d'erreur en cas d'erreur réseau
-            window.location.href = '/erreur';  // Rediriger vers la page 'erreur'
+            window.location.href = '/erreur';
         }
     };
 
@@ -65,81 +62,96 @@ export default function Billetterie() {
         <>
             <Navbar />
             <main className={styles.mainContent}>
-<div className={styles.twodiv}>
-                <Image src="/alberteinstein.jpg" alt="Albert Einstein" width={300} height={300} />
-                <form onSubmit={handleSubmit} className={styles.form}>
-                    <div>
-                <h3>Albert Einstein, à la poursuite de la lumière</h3>
-                <p>Entrée gratuite sur réservation (e-ticket)</p>
-                </div>
-                <div className={styles.formGroup}>
-                    <label>
-                        Date <span className={styles.required}>*</span>
-                        <input
-                            type="date"
-                            name="date"
-                            value={formData.date}
-                            onChange={handleChange}
-                            required
-                        />
-                    </label>
-                    <label>
-                        Horaire <span className={styles.required}>*</span>
-                        <input
-                            type="time"
-                            name="horaire"
-                            value={formData.horaire}
-                            onChange={handleChange}
-                            required
-                        />
-                    </label>
-                    </div>
-                    <label>
-                        Nombre de visiteurs <span className={styles.required}>*</span>
-                        <input
-                            type="number"
-                            name="amount"
-                            value={formData.amount}
-                            onChange={handleChange}
-                            required
-                        />
-                    </label>
-                    <div className={styles.formGroup}>
-                    <label>
-                        Prénom <span className={styles.required}>*</span>
-                        <input
-                            type="text"
-                            name="prenom"
-                            value={formData.prenom}
-                            onChange={handleChange}
-                            required
-                        />
-                    </label>
-                    <label>
-                        Nom <span className={styles.required}>*</span>
-                        <input
-                            type="text"
-                            name="nom"
-                            value={formData.nom}
-                            onChange={handleChange}
-                            required
-                        />
-                    </label>
-                    </div>
-                    <label>
-                        Email <span className={styles.required}>*</span>
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-                    </label>
-                    <button className="button" type="submit">
-                        Confirmer la réservation →
-                    </button>
-                </form>
+                <div className={styles.twodiv}>
+                    <div className={styles.image}></div>
+                    <form onSubmit={handleSubmit} className={styles.form}>
+                        <div className={styles.header}>
+                            <h2>Albert Einstein, à la poursuite de la lumière</h2>
+                            <p>Entrée gratuite sur réservation (e-ticket)</p>
+                        </div>
+                        <div className={styles.formGroup}>
+                            <label>
+                            <div>
+                                Date <span className={styles.required}>*</span>
+                            </div>
+                                <input type="date" name="date" value={formData.date} onChange={handleChange} required />
+                            </label>
+                            <label>
+                                <div>
+  Horaire <span className={styles.required}>*</span>
+</div>
+  <select name="horaire" value={formData.horaire} onChange={handleChange} required>
+    <option value="">Sélectionner l'heure</option>
+    {Array.from({ length: 9 }, (_, index) => {
+      const hour = 10 + index; 
+      return (
+        <option key={hour} value={`${hour < 10 ? '0' : ''}${hour}:00`}>
+          {`${hour < 10 ? '0' : ''}${hour}:00`} 
+        </option>
+      );
+    })}
+  </select>
+</label>
+                        </div>
+                        <label>
+                            <div>
+  Nombre de visiteurs <span className={styles.required}>*</span>
+</div>
+  <div className={styles.counter}>
+    <button 
+      type="button" 
+      onClick={() => setFormData({ ...formData, amount: Math.max(1, formData.amount - 1) })}
+      className={formData.amount === 1 ? styles.disabled : ""}
+      disabled={formData.amount === 1}
+    >
+      -
+    </button>
+    <input
+      type="text"
+      name="amount"
+      value={formData.amount}
+      readOnly
+    />
+    <button 
+      type="button" 
+      onClick={() => setFormData({ ...formData, amount: Math.min(10, formData.amount + 1) })}
+      className={formData.amount === 10 ? styles.disabled : ""}
+      disabled={formData.amount === 10}
+    >
+      +
+    </button>
+  </div>
+</label>
+
+                        <div className={styles.formGroup}>
+                            <label>
+                                <div>
+                                Prénom <span className={styles.required}>*</span>
+                                </div>
+                                <input type="text" name="prenom" value={formData.prenom} onChange={handleChange} required />
+                            </label>
+                            <label>
+                                <div>
+                                Nom <span className={styles.required}>*</span>
+                                </div>
+                                <input type="text" name="nom" value={formData.nom} onChange={handleChange} required />
+                            </label>
+                        </div>
+                        <label>
+                            <div>
+                            Email <span className={styles.required}>*</span>
+                            </div>
+                            <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+                        </label>
+                        <div className={styles.messageGroup}>
+                            <p>Les champs suivis d'un <span className={styles.required}>*</span> sont obligatoires.</p>
+                            <br/>
+                            <p>En confirmant votre commande, vous acceptez les <Link className={styles.link} href="/conditions-generales-de-vente">conditions générales de vente</Link> et le traitement de vos données par l'agence Lunastra. Les galeries ferment 15 minutes avant l’heure officielle. Pour toute question, contactez-nous à l’adresse contact@lunastra.fr.</p>
+                        </div>
+                        <button className="button" type="submit">
+                            Confirmer la réservation →
+                        </button>
+                    </form>
                 </div>
                 {message && <p>{message}</p>}
             </main>

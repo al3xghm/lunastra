@@ -12,9 +12,9 @@ const End = () => {
         <>
             <Navbar />
             <main className={styles.mainContent}>
-            <h1 className="aurora">{t('end.thanks.title')}</h1>
+            <h1>{t('end.thanks.title')}</h1>
             <br />
-                <h3 className="aurora">{t('end.thanks.subtitle')}</h3>
+                <h3>{t('end.thanks.subtitle')}</h3>
                 <div className={styles.details}>
                 <p>{t('end.thanks.content1')}</p>
                 <p>{t('end.thanks.content2')}</p>
