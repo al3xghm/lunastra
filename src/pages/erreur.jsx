@@ -5,25 +5,29 @@ import Link from "next/link";
 import { useTranslations } from 'next-intl';
 
 const End = () => {
-        const t = useTranslations('home');
-    
+    const t = useTranslations('home');
+
     return (
         <>
             <Navbar />
             <main className={styles.mainContent}>
-            <h1 className="aurora">{t('end.error.title')}</h1>
+                <h1 className="aurora">{t('end.error.title')}</h1>
                 <div className={styles.details}>
-                <p>{t('end.error.content1')}</p>
-                <p>{t('end.error.content2')}<a href="mailto:lunastra.contact@gmail.com"><strong>lunastra.contact@gmail.com</strong></a></p>
+                    <p>{t('end.error.content1')}</p>
+                    <p>{t('end.error.content2')}</p>
+                    <p>
+                        {t('end.error.content3')}
+                        <a href="mailto:lunastra.contact@gmail.com"><strong>lunastra.contact@gmail.com</strong></a>.
+                    </p>
 
                 </div>
                 <br />
                 <br />
 
-                    <Link className="button" href="/">
+                <Link className="button" href="/">
                     {t('end.backtohome')}  →
-                    </Link>
-                
+                </Link>
+
             </main>
             <Footer />
         </>

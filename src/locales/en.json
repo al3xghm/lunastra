@@ -155,7 +155,9 @@
         
           "title": "Oops! Something went wrong.",
           "content1": "Please try again later or contact customer service for assistance.",
-          "content2": "We apologize for the inconvenience."        
+          "content2": "We apologize for the inconvenience.",
+          "content3": "Contact-us at "
+    
       },
       "backtohome": "Back to home"
       }

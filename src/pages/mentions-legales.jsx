@@ -9,7 +9,7 @@ const MentionsLegales = () => {
 
     return (
         <>
-             <Navbar /> 
+            <Navbar />
             <div className={styles.ml}>
                 <section>
                     <article>
@@ -36,7 +36,7 @@ const MentionsLegales = () => {
                     ))}
                 </section>
             </div>
-             <Footer /> 
+            <Footer />
         </>
     );
 }

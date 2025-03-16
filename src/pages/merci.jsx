@@ -12,18 +12,18 @@ const End = () => {
         <>
             <Navbar />
             <main className={styles.mainContent}>
-            <h1 className="aurora">{t('end.thanks.title')}</h1>
+                <h1 className="aurora">{t('end.thanks.title')}</h1>
                 <div className={styles.details}>
-                <p>{t('end.thanks.content1')}</p>
-                <p>{t('end.thanks.content2')}</p>
+                    <p>{t('end.thanks.content1')}</p>
+                    <p>{t('end.thanks.content2')}</p>
                 </div>
                 <br />
                 <br />
 
-                    <Link className="button" href="/">
+                <Link className="button" href="/">
                     {t('end.backtohome')}  →
-                    </Link>
-                
+                </Link>
+
             </main>
             <Footer />
         </>

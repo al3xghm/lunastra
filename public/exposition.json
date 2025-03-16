@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "nom": "Décalage d’Einstein",
+      "date": "1907 - 1929",
+      "description": "Le décalage d’Einstein (ou décalage vers le rouge) décrit la façon dont la lumière émise par un objet se décale vers l’infrarouge lorsqu’elle n’est pas soumise à l’attraction d’un champ gravitationnel. Einstein a prédit ce phénomène dans le cadre de sa relativité restreinte.\n\nCet effet est comparable à ce que l’on entend pour le son, comme la sirène d’une ambulance faiblissant en s’éloignant.\n\nCe décalage a été vérifié expérimentalement en 1929 par l’astronome Vesto Melvin Slipher, qui a observé le décalage des raies spectrales des galaxies lointaines."
+    },
+    {
+      "id": 2,
+      "nom": "Éclipse de 1919",
+      "date": "1919",
+      "description": "Pour prouver que la lumière est courbée par la gravité des objets massifs, comme l’entend la théorie de la relativité, l’astronome Arthur Eddington organise une expédition lors de l’éclipse solaire du 29 mai 1919. Pendant cette éclipse totale, la Lune cache le Soleil, permettant d’observer les étoiles situées juste derrière lui.\n\nSi la relativité d’Einstein est correcte, la lumière de ces étoiles doit être légèrement déviée en passant près du Soleil, modifiant leur position apparente.\n\nLes résultats des observations, menées au Brésil et sur l’île de Príncipe, confirment que la lumière est bien déviée comme prévu par Einstein, faisant de lui une célébrité."
+    },
+    {
+      "id": 3,
+      "nom": "Anneaux d’Einstein",
+      "date": "1915 - 1979",
+      "description": "Une lentille gravitationnelle est un phénomène prédit par la relativité générale d’Einstein. Il se produit lorsqu’un objet massif comme une galaxie ou un trou noir courbe la lumière des objets situés derrière lui, agissant comme une lentille géante. Cela peut grossir, déformer ou même dupliquer l’image de l’objet lointain.\n\nCe n’est qu’en 1979 que les premières lentilles gravitationnelles ont été observées, confirmant encore une fois la théorie de la relativité.\n\nLes lentilles gravitationnelles permettent de détecter des objets massifs invisibles, comme la matière noire."
+    },
+    {
+      "id": 4,
+      "nom": "Trous noirs",
+      "date": "1916 - 2019",
+      "description": "Un trou noir est une région de l’espace où la gravité est si intense que rien, pas même la lumière, ne peut s’en échapper. Il se forme généralement après l’effondrement d’une étoile massive en fin de vie. L’idée des trous noirs remonte au 18ème siècle, mais c’est Einstein, avec sa relativité générale, qui démontre leur existence.\n\nEn 1916, le physicien Karl Schwarzschild trouve une solution aux équations d’Einstein. La relativité prédit également que le temps ralentit fortement près d’un trou noir, un effet appelé dilatation temporelle.\n\nIl faut attendre 2019 pour obtenir la première photographie d’un trou noir."
+    },
+    {
+      "id": 5,
+      "nom": "Gravity Probe B",
+      "date": "2004 - 2011",
+      "description": "Gravity Probe B (GP-B) est un satellite lancé en 2004 par la NASA pour tester deux effets clés prédits par la relativité générale d’Einstein : le glissement de cadre et la précession géodésique. La relativité générale affirme que la gravité déforme l’espace-temps et qu’un objet massif en rotation, comme la Terre, entraîne l’espace-temps avec lui.\n\nGP-B transportait des gyroscopes ultra-précis, tournant en apesanteur et orientés vers l’étoile IM Pegasi. Si la Terre ne déformait pas l’espace-temps, les axes de ces gyroscopes resteraient parfaitement fixes. Hors, en 2011, les chercheurs ont confirmé que les gyroscopes avaient subi de légères déviations, conformes aux prédictions de la relativité."
+    },
+    {
+      "id": 6,
+      "nom": "Ondes gravitationnelles",
+      "date": "1916 - 2015",
+      "description": "Les ondes gravitationnelles sont des ondulations de l’espace-temps causées par des événements cosmiques très violents, comme la fusion de trous noirs ou d’étoiles à neutrons. Elles ont été prédites en 1916 par Albert Einstein dans sa relativité générale, qui affirme que des objets massifs en accélération créent ces ondes, un peu comme une pierre jetée dans l’eau produit des vagues.\n\nEn 1974, les astronomes Russell Hulse et Joseph Taylor observent deux étoiles à neutrons en orbite et constatent que leur orbite se rétrécit exactement comme prévu par la relativité, suggérant qu’elles perdent de l’énergie sous forme d’ondes gravitationnelles."
+    }
+  ]
+  

@@ -76,6 +76,7 @@ button, input, textarea, select, a, option, optgroup {
   padding: 1rem 1.5rem;
   font-size: 1.25rem;
   font-weight: 600;
+  border: none;
 }
 
 .leaflet-layer,
@@ -85,4 +86,28 @@ button, input, textarea, select, a, option, optgroup {
 
 .leaflet-control-attribution {
   display: none !important;
+}
+
+
+
+#popup {
+  position: absolute;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+.canvas {
+  overflow: hidden;
+  height: 100% !important;
+  width: 100% !important;
 }

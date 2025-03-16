@@ -5,11 +5,11 @@ import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 
 const ConditionsGeneralesDeVente = () => {
-    const t = useTranslations('home.cgv'); 
+    const t = useTranslations('home.cgv');
 
     return (
         <>
-                     <Navbar /> 
+            <Navbar />
             <div className={styles.cgv}>
                 <section>
                     <h1>{t('title')}</h1>

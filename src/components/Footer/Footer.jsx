@@ -65,7 +65,7 @@ const Footer = () => {
           <div className={styles.footer__socials}>
             <p>{t('footer.socialsTitle')}</p>
             <div className={styles.footer__socials__links}>
-            <a href="#" aria-label="Instagram"><Image src="/instagram.svg" alt="Instagram" width={25} height={25} /></a>
+            <a href="#" aria-label="Instagram"><Image src="/Instagram.svg" alt="Instagram" width={25} height={25} /></a>
             <a href="#" aria-label="X (Twitter)"><Image src="/X.svg" alt="X" width={25} height={25} /></a>
             <a href="#" aria-label="Email"><Image src="/Mail.svg" alt="Email" width={25} height={25} /></a>
             </div>

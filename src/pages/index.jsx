@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import gsap from "gsap";
 import styles from "@/styles/index.module.scss";
 import Footer from "@/components/Footer/Footer";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Head from "next/head";
 import { useTranslations } from 'next-intl';
@@ -27,10 +28,10 @@ export default function Home() {
 
   const faqData = t('faq', { default: {} });
 
-  const limitedFaqData = Object.keys(faqData).slice(0, 4); 
+  const limitedFaqData = Object.keys(faqData).slice(0, 4);
 
   const toggleAnswer = (index) => {
-    setActiveQuestion(activeQuestion === index ? null : index); 
+    setActiveQuestion(activeQuestion === index ? null : index);
   };
 
   const openModal = (image) => {
@@ -42,6 +43,54 @@ export default function Home() {
     setActiveImage(null);
     setIsModalOpen(false);
   };
+
+  const videoRef = useRef(null);
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    const spans = titleRef.current.querySelectorAll("span");
+
+    // Initialiser les spans avec une opacité de 0
+    gsap.set(spans, { opacity: 0 });
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      spans.forEach((span, index) => {
+        const position = span.getBoundingClientRect().top;
+        const triggerPoint = windowHeight - 100; // Se déclenche un peu avant que la lettre disparaisse
+
+        // Si la lettre est dans la vue
+        if (position < triggerPoint) {
+          gsap.to(span, {
+            opacity: 1, // Devenir visible
+            duration: 0.8,
+            delay: index * 0.2, // Délais pour chaque lettre
+            ease: "power3.out",
+          });
+        }
+      });
+
+      // Effet de mise à l'échelle de la vidéo
+      const videoPosition = videoElement.getBoundingClientRect().top;
+      if (videoPosition < windowHeight && videoPosition > 0) {
+        const scale = Math.min(0.1 + (scrollY / windowHeight) * 0.7, 1); // Mise à l'échelle progressive
+
+        gsap.to(videoElement, {
+          scale: scale,
+          duration: 0.5,
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
 
   return (
     <>
@@ -65,7 +114,12 @@ export default function Home() {
         </p>
       </section>
       <section className={styles.teaser}>
-        <img className={styles.video} src="/background.png" alt="Teaser" />
+        <video
+          ref={videoRef}  // Ajoutez cette ligne
+          className={styles.video} loop controls>
+          <source src="/teaser.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
       </section>
       <section className={styles.about}>
         <div className={styles.leftcontent}>
@@ -100,13 +154,13 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.experience}>
-        <h1 className={styles.title}>
+        <h1 ref={titleRef} className={styles.title}>
           <span>{t('experience.titlePart1')}</span>
           <span>{t('experience.titlePart2')}</span>
           <span className="aurora">{t('experience.titlePart3')}</span>
           <span>{t('experience.titlePart4')}</span>
         </h1>
-        <Image className={styles.video} src="/background.png" alt="Experience" width={500} height={500} />
+        <Image className={styles.video} src="/teaser.mp4" alt="Experience" width={500} height={500} />
         <div className={styles.description}>
           <p>
             <b>{t('experience.descriptionTitle')}</b>
@@ -139,17 +193,17 @@ export default function Home() {
           <h1>FAQ</h1>
         </div>
         <div className={styles.faqList}>
-        {limitedFaqData.map((faq, index) => (
-          <div key={index} className={`${styles.faqItem} ${activeQuestion === index ? styles.active : ''}`}>
-            <button onClick={() => toggleAnswer(index)} className={styles.question}>
-              {t(`faq.${faq}.question`)}
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
-              </svg>
-            </button>
-            <div className={`${styles.answer} ${activeQuestion === index ? styles.active : ''}`}>
-              <p>{t(`faq.${faq}.answer`)}</p>
-            </div>
+          {limitedFaqData.map((faq, index) => (
+            <div key={index} className={`${styles.faqItem} ${activeQuestion === index ? styles.active : ''}`}>
+              <button onClick={() => toggleAnswer(index)} className={styles.question}>
+                {t(`faq.${faq}.question`)}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                </svg>
+              </button>
+              <div className={`${styles.answer} ${activeQuestion === index ? styles.active : ''}`}>
+                <p>{t(`faq.${faq}.answer`)}</p>
+              </div>
             </div>
           ))}
         </div>

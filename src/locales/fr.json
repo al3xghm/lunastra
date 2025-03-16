@@ -13,7 +13,7 @@
       "entryInfo": "Entrée gratuite sur réservation",
       "exhibitionTitle": "Une exposition immersive exclusive proposée par ★ Lunastra",
       "agencyDescription": "Lunastra est une agence de communication spécialisée dans la culture de l’univers et de l’espace",
-      "socialsTitle": "Retrouvez nous sur",
+      "socialsTitle": "Retrouvez-nous sur",
       "copyright": "© 2025, Lunastra, Tous droits réservés",
       "legalNotice": "Mentions légales",
       "privacyPolicy": "Politique de confidentialité"
@@ -156,8 +156,9 @@
         
           "title": "Erreur lors de la réservation",
           "content1": "Veuillez réessayer ultérieurement ou contacter le service client pour obtenir de l'aide.",
-          "content2": "Nous nous excusons pour la gêne occasionnée."
-        
+          "content2": "Nous nous excusons pour la gêne occasionnée.",
+          "content3": "Contactez-nous à l'adresse "
+      
       },
       "backtohome": "Retour à l'accueil"
       }
