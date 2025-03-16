@@ -14,7 +14,7 @@
   
     &__content {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       width: 100%;
       padding: 2rem;
       gap: 10%;
@@ -91,3 +91,17 @@
   }
 
   
+@media screen and (max-width: 768px) {
+  .footer {
+    &__content, &__bottom, &__bottom__links {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__bottom {
+      gap: 1rem;
+    }
+    &__bottom__links {
+      gap: 0.5rem;
+    }
+  }
+}

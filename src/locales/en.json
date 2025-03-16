@@ -16,7 +16,7 @@
       "socialsTitle": "Follow us on",
       "copyright": "© 2025, Lunastra, All rights reserved",
       "legalNotice": "Legal notice",
-      "privacyPolicy": "Privacy Policy"
+      "cgv": "Terms and Conditions of Sale"
     },
     "header": {
       "title": "Albert Einstein",
@@ -45,24 +45,16 @@
       "carouselSubtitle": "Come experience Albert Einstein's discoveries in an immersive exhibition,",
       "carouselSubtitle2": "just a few minutes from Paris"
     },
-    "faq": [
-      {
-        "question": "What is the duration of the exhibition?",
-        "answer": "The exhibition lasts about 1 hour, but you can spend more time depending on your interest."
-      },
-      {
-        "question": "Do I need to book in advance?",
-        "answer": "Yes, entry is free, but reservation is mandatory."
-      },
-      {
-        "question": "What are the opening hours?",
-        "answer": "The exhibition is open daily from 10 AM to 6 PM."
-      },
-      {
-        "question": "What is the entrance fee?",
-        "answer": "Entry is free."
-      }
-    ],
+    "faq": {
+      "question1": "What is the duration of the exhibition?",
+      "answer1": "The exhibition lasts about 1 hour, but you can spend more time depending on your interest.",
+      "question2": "Do I need to book in advance?",
+      "answer2": "Yes, entry is free, but reservation is mandatory.",
+      "question3": "What are the opening hours?",
+      "answer3": "The exhibition is open daily from 10 AM to 6 PM.",
+      "question4": "What is the entrance fee?",
+      "answer4": "Entry is free."  
+    },
     "legal": {
       "title": "Legal Notices",
       "company": "Company Name — Lunastra",
@@ -108,7 +100,7 @@
             "content": "If you have any questions or concerns about this privacy policy or the use of your personal data, please contact us at the email address or postal address listed above (see legal notices)."
           }
         ]
-      }      
+      }
     },
     "cgv": {
       "title": "Terms and Conditions of Sale",
@@ -146,21 +138,17 @@
     },
     "end": {
       "thanks": {
-        
-          "title": "Thank you for your reservation!",
-          "content1": "A confirmation receipt containing the details of your order has been sent to the provided email address.",
-          "content2": "Check your spam folders! Please keep it for your records."        
+        "title": "Thank you for your reservation!",
+        "content1": "A confirmation receipt containing the details of your order has been sent to the provided email address.",
+        "content2": "Check your spam folders! Please keep it for your records."
       },
       "error": {
-        
-          "title": "Oops! Something went wrong.",
-          "content1": "Please try again later or contact customer service for assistance.",
-          "content2": "We apologize for the inconvenience.",
-          "content3": "Contact-us at "
-    
+        "title": "Oops! Something went wrong.",
+        "content1": "Please try again later or contact customer service for assistance.",
+        "content2": "We apologize for the inconvenience.",
+        "content3": "Contact-us at "
       },
       "backtohome": "Back to home"
-      }
     }
   }
-
+}

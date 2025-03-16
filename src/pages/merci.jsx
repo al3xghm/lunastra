@@ -3,6 +3,7 @@ import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import Link from "next/link";
 import { useTranslations } from 'next-intl';
+import Head from 'next/head';
 
 const End = () => {
 
@@ -10,6 +11,10 @@ const End = () => {
 
     return (
         <>
+            <Head>
+                <title>{t('end.thanks.title')}</title>
+            </Head>
+
             <Navbar />
             <main className={styles.mainContent}>
                 <h1 className="aurora">{t('end.thanks.title')}</h1>

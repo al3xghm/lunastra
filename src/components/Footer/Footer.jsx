@@ -76,7 +76,7 @@ const Footer = () => {
       <div className={styles.footer__bottom}>
         <div className={styles.footer__bottom__links}>
         <a href="mentions-legales">{t('footer.legalNotice')}</a>
-        <a href="conditions-generales-de-vente">{t('footer.privacyPolicy')}</a>
+        <a href="conditions-generales-de-vente">{t('footer.cgv')}</a>
         </div>
         <p>{t('footer.copyright')}</p>
       </div>

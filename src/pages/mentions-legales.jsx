@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
+import Head from 'next/head';
 import styles from '@/styles/mentions-legales.module.scss';
 import { useTranslations } from 'next-intl';
 
@@ -9,12 +10,15 @@ const MentionsLegales = () => {
 
     return (
         <>
+            <Head>
+                <title>{t('legal.title')}</title>
+            </Head>
+
             <Navbar />
             <div className={styles.ml}>
                 <section>
                     <article>
                         <h1>{t('legal.title')}</h1>
-                        <meta name="description" content={t('title')} />
                         <ul>
                             <li>{t('legal.company')}  &#160;&#160;—&#160;&#160; {t('legal.status')}</li>
                             <li>{t('legal.address')}</li>

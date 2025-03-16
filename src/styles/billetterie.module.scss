@@ -1,5 +1,3 @@
-
-
 .mainContent {
   background-image: url('/background.png');
   width: 100%;
@@ -57,7 +55,8 @@
       gap: 0.5rem;
     }
 
-   select, input {
+    select,
+    input {
       background: transparent;
       border: 1px solid white;
       color: white;
@@ -82,7 +81,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-    
+
       button {
         width: 40px;
         height: 40px;
@@ -95,14 +94,14 @@
         font-weight: bold;
         cursor: pointer;
         transition: 0.3s;
-    
+
         &.disabled {
           border-color: grey;
           color: grey;
           cursor: not-allowed;
         }
       }
-    
+
       input {
         width: 40px;
         height: 40px;
@@ -113,7 +112,7 @@
         font-weight: bold;
       }
     }
-    
+
   }
 }
 
@@ -128,3 +127,44 @@
 }
 
 
+
+@media screen and (max-width: 768px) {
+
+ 
+
+
+  .mainContent {
+    padding: 5rem 1rem;
+
+  }
+
+  .twodiv {
+    flex-direction: column;
+
+    .image {
+      width: 100%;
+      height: 300px;
+    }
+
+    .form {
+      width: 100%;
+      padding: 20px;
+
+      .header {
+
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .formGroup {
+      flex-direction: column;
+    }
+  }
+
+}

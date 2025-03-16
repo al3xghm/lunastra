@@ -23,7 +23,8 @@ export default function App({ Component, pageProps }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta name="language" content={locale} />
-                <meta name="author" content="Lunastra" />
+                <meta name="author" content="Lunastra" />                
+                <link rel="icon" href="/logo.png" />
             </Head>
             <NextIntlClientProvider locale={locale} messages={pageProps.messages || {}}>
                 <Component {...pageProps} />

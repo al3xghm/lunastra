@@ -16,7 +16,7 @@
       "socialsTitle": "Retrouvez-nous sur",
       "copyright": "© 2025, Lunastra, Tous droits réservés",
       "legalNotice": "Mentions légales",
-      "privacyPolicy": "Politique de confidentialité"
+      "cgv": "Conditions générales de vente"
     },
     "header": {
       "title": "Albert Einstein",
@@ -45,24 +45,16 @@
       "carouselSubtitle": "Venez vivre les découvertes d'Albert Einstein à travers une exposition immersive,",
       "carouselSubtitle2": "à quelques minutes de Paris"
     },
-    "faq": [
-      {
-        "question": "Quelle est la durée de l'exposition ?",
-        "answer": "La durée de l'exposition est d'environ 1 heure, mais vous pouvez y passer plus de temps selon votre intérêt."
-      },
-      {
-        "question": "Faut-il réserver à l'avance ?",
-        "answer": "Oui, l'entrée est gratuite, mais la réservation est obligatoire."
-      },
-      {
-        "question": "Quels sont les horaires d'ouverture ?",
-        "answer": "L'exposition est ouverte tous les jours de 10h à 18h."
-      },
-      {
-        "question": "Quel est le tarif de l'entrée ?",
-        "answer": "L'entrée est gratuite."
-      }
-    ],
+    "faq": {
+      "question1": "Quelle est la durée de l'exposition ?",
+      "answer1": "La durée de l'exposition est d'environ 1 heure, mais vous pouvez y passer plus de temps selon votre intérêt.",
+      "question2": "Faut-il réserver à l'avance ?",
+      "answer2": "Oui, l'entrée est gratuite, mais la réservation est obligatoire.",
+      "question3": "Quels sont les horaires d'ouverture ?",
+      "answer3": "L'exposition est ouverte tous les jours de 10h à 18h.",
+      "question4": "Quel est le tarif de l'entrée ?",
+      "answer4": "L'entrée est gratuite."
+    },
     "legal": {
       "title": "Mentions légales",
       "company": "Nom de l'entreprise — Lunastra",

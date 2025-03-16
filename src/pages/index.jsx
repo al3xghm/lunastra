@@ -26,9 +26,7 @@ export default function Home() {
     { src: '/slider5.webp', description: 'Résidence de Caputh, lieu de réflexion' }
   ];
 
-  const faqData = t('faq', { default: {} });
-
-  const limitedFaqData = Object.keys(faqData).slice(0, 4);
+  const faqData = [1, 2, 3, 4];
 
   const toggleAnswer = (index) => {
     setActiveQuestion(activeQuestion === index ? null : index);
@@ -51,12 +49,12 @@ export default function Home() {
     const videoElement = videoRef.current;
     const spans = titleRef.current.querySelectorAll("span");
 
-    // Initialiser les spans avec une opacité de 0
     gsap.set(spans, { opacity: 0 });
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
+      const isMobile = window.innerWidth <= 768; // Détecte si c'est un mobile ou une petite tablette
 
       spans.forEach((span, index) => {
         const position = span.getBoundingClientRect().top;
@@ -73,16 +71,19 @@ export default function Home() {
         }
       });
 
-      // Effet de mise à l'échelle de la vidéo
-      const videoPosition = videoElement.getBoundingClientRect().top;
-      if (videoPosition < windowHeight && videoPosition > 0) {
-        const scale = Math.min(0.1 + (scrollY / windowHeight) * 0.7, 1); // Mise à l'échelle progressive
+      if (!isMobile) {
 
-        gsap.to(videoElement, {
-          scale: scale,
-          duration: 0.5,
-        });
-      }
+        // Effet de mise à l'échelle de la vidéo
+        const videoPosition = videoElement.getBoundingClientRect().top;
+        if (videoPosition < windowHeight && videoPosition > 0) {
+          const scale = Math.min(0.1 + (scrollY / windowHeight) * 0.7, 1); // Mise à l'échelle progressive
+
+          gsap.to(videoElement, {
+            scale: scale,
+            duration: 0.5,
+          });
+        }
+      };
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -97,6 +98,7 @@ export default function Home() {
       <Head>
         <title>Albert Einstein, à la poursuite de la lumière</title>
         <meta name="description" content="Une exposition immersive aux frontières du savoir" />
+        <meta name="keywords" content="Albert Einstein, exposition, savoir, lumière" />
       </Head>
       <Navbar />
       <header className={styles.header}>
@@ -160,7 +162,7 @@ export default function Home() {
           <span className="aurora">{t('experience.titlePart3')}</span>
           <span>{t('experience.titlePart4')}</span>
         </h1>
-        <Image className={styles.video} src="/teaser.mp4" alt="Experience" width={500} height={500} />
+        <Image className={styles.video} src="/expovisu.png" alt="Experience" width={500} height={500} />
         <div className={styles.description}>
           <p>
             <b>{t('experience.descriptionTitle')}</b>
@@ -193,19 +195,20 @@ export default function Home() {
           <h1>FAQ</h1>
         </div>
         <div className={styles.faqList}>
-          {limitedFaqData.map((faq, index) => (
+          {faqData.map((faqKey, index) => (
             <div key={index} className={`${styles.faqItem} ${activeQuestion === index ? styles.active : ''}`}>
               <button onClick={() => toggleAnswer(index)} className={styles.question}>
-                {t(`faq.${faq}.question`)}
+                {t(`faq.question${faqKey}`)} {/* Access the question via dot notation */}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                   <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
                 </svg>
               </button>
               <div className={`${styles.answer} ${activeQuestion === index ? styles.active : ''}`}>
-                <p>{t(`faq.${faq}.answer`)}</p>
+                <p>{t(`faq.answer${faqKey}`)} {/* Access the answer via dot notation */}</p>
               </div>
             </div>
           ))}
+
         </div>
       </section>
       <Footer />

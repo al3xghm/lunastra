@@ -9,12 +9,28 @@ import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPa
 // spline
 import spline from '../utils/spline';
 import getStarfield from '../utils/getStarfield';
-
+import Head from 'next/head';
 
 const Exposition = () => {
     const canvasRef = useRef(null);
     const [showCanvas, setShowCanvas] = useState(false);
 
+    const [isMobile, setIsMobile] = useState(false);
+    const isMobileOrTablet = /Mobi|Tablet|iPad|Android/i.test(navigator.userAgent);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(isMobileOrTablet || window.innerWidth < 768);
+            // setIsMobile(window.innerWidth < 768);
+        };
+
+        handleResize(); // Vérifier au premier rendu
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     useEffect(() => {
         if (!showCanvas) return;
 
@@ -230,18 +246,26 @@ const Exposition = () => {
 
     return (
         <>
+            <Head>
+                <title>Interactive Exhibition</title>
+            </Head>
             <Navbar />
             <div className={styles.enterExperience} id='enterButton'>
-                <h1>Interactive Exposition</h1>
-                <p>Explorez l'exposition interactive</p>
-                <p>Utilisez votre curseur pour interagir avec les cubes</p>
-                <button
-                    className='button'
-                    onClick={() => {
-                        setShowCanvas(true);
-                        document.getElementById('enterButton').style.display = 'none';
-                    }}
-                >Enter the Exposition</button>
+                <h1>Exposition interactive</h1>
+                {
+                    isMobile ? <p>La version mobile n'est pas prise en charge. Veuillez visiter cette page sur un ordinateur pour profiter de l'expérience.
+                    </p> :
+                        <><p>Utilisez votre curseur pour interagir avec les sphères et en découvrir plus sur les travaux d'Albert Einstein.</p>
+                            <button
+                                className='button'
+                                onClick={() => {
+                                    setShowCanvas(true);
+                                    document.getElementById('enterButton').style.display = 'none';
+                                }}
+                            >C'est parti!</button>
+                        </>
+                }
+
             </div>
 
             {

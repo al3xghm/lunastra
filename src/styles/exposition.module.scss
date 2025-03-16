@@ -18,6 +18,18 @@
     background-repeat: no-repeat;
     flex-direction: column;
     gap: 20px;
+    text-align: center;
+
+    h1 {
+        font-family: 'Aurora', serif;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    p {
+        max-width: 600px;
+        text-align: center;
+    }
 
     button {
         cursor: pointer;

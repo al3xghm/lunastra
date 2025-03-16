@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "@/styles/billetterie.module.scss";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
+import Head from "next/head";
 
 export default function Billetterie() {
     const [formData, setFormData] = useState({
@@ -60,6 +61,9 @@ export default function Billetterie() {
 
     return (
         <>
+            <Head>
+                <title>Billetterie</title>
+            </Head>
             <Navbar />
             <main className={styles.mainContent}>
                 <div className={styles.twodiv}>
@@ -74,9 +78,9 @@ export default function Billetterie() {
                                 <div>
                                     Date <span className={styles.required}>*</span>
                                 </div>
-                                <input type="date" name="date" value={formData.date} onChange={handleChange} 
-                                placeholder="jj/mm/aaaa"
-                                required />
+                                <input type="date" name="date" value={formData.date} onChange={handleChange}
+                                    placeholder="jj/mm/aaaa"
+                                    required />
                             </label>
                             <label>
                                 <div>
@@ -131,16 +135,16 @@ export default function Billetterie() {
                                     Prénom <span className={styles.required}>*</span>
                                 </div>
                                 <input type="text" name="prenom" value={formData.prenom} onChange={handleChange}
-                                placeholder="Prénom"
-                                required />
+                                    placeholder="Prénom"
+                                    required />
                             </label>
                             <label>
                                 <div>
                                     Nom <span className={styles.required}>*</span>
                                 </div>
                                 <input type="text" name="nom" value={formData.nom} onChange={handleChange}
-                                placeholder="Nom"
-                                required />
+                                    placeholder="Nom"
+                                    required />
                             </label>
                         </div>
                         <label>
@@ -148,8 +152,8 @@ export default function Billetterie() {
                                 Adresse mail <span className={styles.required}>*</span>
                             </div>
                             <input type="email" name="email" value={formData.email} onChange={handleChange}
-                            placeholder="example@mail.fr"
-                            required />
+                                placeholder="example@mail.fr"
+                                required />
                         </label>
                         <div className={styles.messageGroup}>
                             <p>Les champs suivis d'un <span className={styles.required}>*</span> sont obligatoires.</p>

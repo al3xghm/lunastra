@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '@/styles/conditions-generales-de-vente.module.scss';
 import { useTranslations } from 'next-intl';
 import Navbar from '@/components/Navbar/Navbar';
+import Head from 'next/head';
 import Footer from '@/components/Footer/Footer';
 
 const ConditionsGeneralesDeVente = () => {
@@ -9,6 +10,9 @@ const ConditionsGeneralesDeVente = () => {
 
     return (
         <>
+            <Head>
+                <title>{t('title')}</title>
+            </Head>
             <Navbar />
             <div className={styles.cgv}>
                 <section>

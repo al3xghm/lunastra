@@ -2,6 +2,7 @@ import styles from "@/styles/end.module.scss";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import Link from "next/link";
+import Head from 'next/head';
 import { useTranslations } from 'next-intl';
 
 const End = () => {
@@ -9,6 +10,9 @@ const End = () => {
 
     return (
         <>
+            <Head>
+                <title>{t('end.error.title')}</title>
+            </Head>
             <Navbar />
             <main className={styles.mainContent}>
                 <h1 className="aurora">{t('end.error.title')}</h1>
