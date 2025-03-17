@@ -1,14 +1,14 @@
 {
   "home": {
     "navbar": {
-      "date": "May 25 - June 21",
+      "date": "June 01 - September 01",
       "ticketing": "Ticketing",
       "exhibition": "Interactive Exhibition"
     },
     "footer": {
       "title": "Albert Einstein,",
       "title2": "In Pursuit of Light",
-      "date": "May 25 to June 21, 2025",
+      "date": "June 01 to September 01, 2025",
       "address": "2 Rue Albert Einstein,",
       "entryInfo": "Free entry by reservation",
       "exhibitionTitle": "An immersive exclusive exhibition presented by ★ Lunastra",
@@ -19,6 +19,7 @@
       "cgv": "Terms and Conditions of Sale"
     },
     "header": {
+      "titlepage": "Albert Einstein, In Pursuit of Light",
       "title": "Albert Einstein",
       "subtitle": "In Pursuit of Light"
     },
@@ -149,6 +150,32 @@
         "content3": "Contact-us at "
       },
       "backtohome": "Back to home"
-    }
+    },
+      "ticketing": {
+        "titlepage": "Ticketing",
+        "title": "Albert Einstein, In Pursuit of Light",
+        "subtitle": "Free entry by reservation (e-ticket)",
+        "form": {
+          "name": "Name",
+          "firstname": "First name",
+          "email": "Email",
+          "time": "Time slot",
+          "timeplaceholder": "Select a time",
+          "quantity": "Number of visitors",
+          "submit": "Confirm reservation",
+          "warning": "Fields marked with a ",
+          "warning2": " are mandatory.",
+          "terms": "By confirming your order, you accept the ",
+          "termslink": "terms and conditions of sale",
+          "terms2": "and the processing of your data by the Lunastra agency. The galleries close 15 minutes before the official time. For any questions, contact us at contact@lunastra.fr."
+        }
+      },
+      "exhibition": {
+        "title": "Interactive Exhibition",
+        "desktop": "Using your cursor, click on the colored stars to discover some of the greatest discoveries by famous scientists through this wormhole.",
+        "button": "Let's go!",
+        "mobile": "The mobile version is not supported. Please visit this page on a computer to enjoy the experience.",
+        "backtohome": "Back to home"
+      }
   }
 }

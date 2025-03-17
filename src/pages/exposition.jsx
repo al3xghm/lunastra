@@ -6,22 +6,24 @@ import styles from '@/styles/exposition.module.scss';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
-// spline
 import spline from '../utils/spline';
 import getStarfield from '../utils/getStarfield';
 import Head from 'next/head';
+import { useTranslations } from 'next-intl';
 
 const Exposition = () => {
+    const t = useTranslations('home');
+    
     const canvasRef = useRef(null);
     const [showCanvas, setShowCanvas] = useState(false);
 
     const [isMobile, setIsMobile] = useState(false);
     const isMobileOrTablet = /Mobi|Tablet|iPad|Android/i.test(navigator.userAgent);
 
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(isMobileOrTablet || window.innerWidth < 768);
-            // setIsMobile(window.innerWidth < 768);
         };
 
         handleResize(); // Vérifier au premier rendu
@@ -100,23 +102,22 @@ const Exposition = () => {
         function onMouseMove(event) {
             mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
             mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-        }
+        } 
+
 
         function checkIntersections() {
             raycaster.setFromCamera(mouse, camera);
             const intersects = raycaster.intersectObjects(boxGroup.children);
             if (intersects.length > 0) {
                 const box = intersects[0].object;
-                const color = box.material.color.getStyle(); // Récupère la couleur de la sphère
+                const color = box.material.color.getStyle(); 
                 showPopup(box.userData.id, color);
                 stopCamera();
             }
         }
 
-
         async function showPopup(id, color) {
             let popup = document.getElementById('popup');
-
             if (!popup) {
                 popup = document.createElement('div');
                 popup.id = 'popup';
@@ -130,9 +131,10 @@ const Exposition = () => {
             }
 
             try {
-                // Fetch des données depuis le fichier JSON
-                const response = await fetch('/exposition.json'); // Assurez-vous que le chemin est correct
-                const data = await response.json();
+                const lang = window.location.pathname.includes('/en') ? 'en' : 'fr';
+        // Charger le fichier JSON en fonction de la langue
+        const response = await fetch(`/${lang === 'en' ? 'expoen.json' : 'expo.json'}`);
+        const data = await response.json();
 
                 // Trouver l'événement correspondant à l'id
                 const event = data.find(item => item.id === id);
@@ -185,11 +187,11 @@ const Exposition = () => {
         function closePopup() {
             const popup = document.getElementById('popup');
             if (popup) {
-                popup.classList.remove(styles.popupVisible); // Effet de disparition
+                popup.classList.remove(styles.popupVisible); 
                 setTimeout(() => {
                     popup.remove();
                     resumeCamera();
-                }, 300); // Temps d'attente pour que l'animation disparaisse
+                }, 100);
             }
         }
 
@@ -247,30 +249,37 @@ const Exposition = () => {
     return (
         <>
             <Head>
-                <title>Interactive Exhibition</title>
+                <title>{t('exhibition.title')}</title>
             </Head>
             <Navbar />
             <div className={styles.enterExperience} id='enterButton'>
-                <h1>Exposition interactive</h1>
+                <h1>{t('exhibition.title')}</h1>
                 {
-                    isMobile ? <p>La version mobile n'est pas prise en charge. Veuillez visiter cette page sur un ordinateur pour profiter de l'expérience.
+                    isMobile ? <p>{t('exhibition.mobile')}
                     </p> :
-                        <><p>Utilisez votre curseur pour interagir avec les sphères et en découvrir plus sur les travaux d'Albert Einstein.</p>
+                        <><p>{t('exhibition.desktop')}</p>
                             <button
                                 className='button'
                                 onClick={() => {
                                     setShowCanvas(true);
                                     document.getElementById('enterButton').style.display = 'none';
+                                    document.getElementById('exitButton').style.display = 'block';
                                 }}
-                            >C'est parti!</button>
+                            >{t('exhibition.button')}</button>
                         </>
                 }
 
             </div>
 
             {
-                showCanvas && <canvas className='canvas' ref={canvasRef}></canvas>
+                
+                showCanvas && <canvas className='canvas' ref={canvasRef}>
+                </canvas>
             }
+            <button id='exitButton' className={`button ${styles.exitButton}`} onClick={() => window.location.href = '/'}>
+                            ← {t('exhibition.backtohome')}
+                    </button>
+
             <Footer />
         </>
     );

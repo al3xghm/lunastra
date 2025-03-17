@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "nom": "Einstein's Shift",
+      "date": "1907 - 1929",
+      "description": "The Einstein shift (or redshift) describes how light emitted by an object shifts towards the infrared when it is not subjected to the attraction of a gravitational field. Einstein predicted this phenomenon in the context of his special relativity.\n\nThis effect is similar to what we hear with sound, like the fading siren of an ambulance as it moves away.\n\nThis shift was experimentally verified in 1929 by astronomer Vesto Melvin Slipher, who observed the spectral shift of distant galaxies."
+    },
+    {
+      "id": 2,
+      "nom": "Eclipse of 1919",
+      "date": "1919",
+      "description": "To prove that light is bent by the gravity of massive objects, as the theory of relativity suggests, astronomer Arthur Eddington organized an expedition during the solar eclipse of May 29, 1919. During this total eclipse, the Moon hides the Sun, allowing observation of stars located just behind it.\n\nIf Einstein's relativity is correct, the light from these stars should be slightly deflected when passing near the Sun, altering their apparent position.\n\nThe results of the observations, conducted in Brazil and on the island of Príncipe, confirm that light is indeed bent as predicted by Einstein, making him a celebrity."
+    },
+    {
+      "id": 3,
+      "nom": "Einstein Rings",
+      "date": "1915 - 1979",
+      "description": "A gravitational lens is a phenomenon predicted by Einstein's general relativity. It occurs when a massive object like a galaxy or black hole bends the light from objects behind it, acting as a giant lens. This can magnify, distort, or even duplicate the image of the distant object.\n\nIt wasn't until 1979 that the first gravitational lenses were observed, once again confirming the theory of relativity.\n\nGravitational lenses allow the detection of invisible massive objects, like dark matter."
+    },
+    {
+      "id": 4,
+      "nom": "Black Holes",
+      "date": "1916 - 2019",
+      "description": "A black hole is a region of space where gravity is so intense that nothing, not even light, can escape. It generally forms after the collapse of a massive star at the end of its life. The concept of black holes dates back to the 18th century, but it was Einstein, with his general relativity, who demonstrated their existence.\n\nIn 1916, physicist Karl Schwarzschild found a solution to Einstein's equations. Relativity also predicts that time slows down dramatically near a black hole, an effect known as time dilation.\n\nIt wasn't until 2019 that the first photograph of a black hole was obtained."
+    },
+    {
+      "id": 5,
+      "nom": "Gravity Probe B",
+      "date": "2004 - 2011",
+      "description": "Gravity Probe B (GP-B) is a satellite launched in 2004 by NASA to test two key effects predicted by Einstein's general relativity: frame dragging and geodetic precession. General relativity states that gravity distorts space-time and that a rotating massive object, like the Earth, drags space-time along with it.\n\nGP-B carried ultra-precise gyroscopes, rotating in zero gravity and oriented towards the star IM Pegasi. If Earth did not distort space-time, the axes of these gyroscopes would remain perfectly fixed. However, in 2011, researchers confirmed that the gyroscopes had experienced slight deviations, in line with relativity's predictions."
+    },
+    {
+      "id": 6,
+      "nom": "Gravitational Waves",
+      "date": "1916 - 2015",
+      "description": "Gravitational waves are ripples in space-time caused by very violent cosmic events, such as the merging of black holes or neutron stars. They were predicted in 1916 by Albert Einstein in his general relativity, which states that massive objects in acceleration create these waves, much like a stone thrown into water produces ripples.\n\nIn 1974, astronomers Russell Hulse and Joseph Taylor observed two neutron stars in orbit and noticed that their orbit was shrinking exactly as predicted by relativity, suggesting they were losing energy in the form of gravitational waves."
+    }
+  ]
+  

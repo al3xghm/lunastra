@@ -10,8 +10,6 @@ import { useTranslations } from 'next-intl';
 import ThreeBackground from "@/components/ThreeBackground";
 
 
-
-
 export default function Home() {
   const [activeQuestion, setActiveQuestion] = useState(null);
   const [activeImage, setActiveImage] = useState(null);
@@ -54,18 +52,17 @@ export default function Home() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
-      const isMobile = window.innerWidth <= 768; // Détecte si c'est un mobile ou une petite tablette
+      const isMobile = window.innerWidth <= 768;
 
       spans.forEach((span, index) => {
         const position = span.getBoundingClientRect().top;
-        const triggerPoint = windowHeight - 100; // Se déclenche un peu avant que la lettre disparaisse
+        const triggerPoint = windowHeight - 100; 
 
-        // Si la lettre est dans la vue
         if (position < triggerPoint) {
           gsap.to(span, {
-            opacity: 1, // Devenir visible
+            opacity: 1, 
             duration: 0.8,
-            delay: index * 0.2, // Délais pour chaque lettre
+            delay: index * 0.2, 
             ease: "power3.out",
           });
         }
@@ -73,10 +70,9 @@ export default function Home() {
 
       if (!isMobile) {
 
-        // Effet de mise à l'échelle de la vidéo
         const videoPosition = videoElement.getBoundingClientRect().top;
         if (videoPosition < windowHeight && videoPosition > 0) {
-          const scale = Math.min(0.1 + (scrollY / windowHeight) * 0.7, 1); // Mise à l'échelle progressive
+          const scale = Math.min(0.1 + (scrollY / windowHeight) * 0.7, 1); 
 
           gsap.to(videoElement, {
             scale: scale,
@@ -96,7 +92,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Albert Einstein, à la poursuite de la lumière</title>
+        <title>{t('header.titlepage')}</title>
         <meta name="description" content="Une exposition immersive aux frontières du savoir" />
         <meta name="keywords" content="Albert Einstein, exposition, savoir, lumière" />
       </Head>

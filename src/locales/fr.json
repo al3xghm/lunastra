@@ -1,14 +1,14 @@
 {
   "home": {
     "navbar": {
-      "date": "25 Mai - 21 Juin",
+      "date": "01 Juin - 01 Septembre",
       "ticketing": "Billetterie",
       "exhibition": "Exposition interactive"
     },
     "footer": {
       "title": "Albert Einstein,",
       "title2": "à la poursuite de la lumière",
-      "date": "25 Mai au 21 Juin 2025",
+      "date": "01 Juin au 01 Septembre 2025",
       "address": "2 Rue Albert Einstein,",
       "entryInfo": "Entrée gratuite sur réservation",
       "exhibitionTitle": "Une exposition immersive exclusive proposée par ★ Lunastra",
@@ -19,6 +19,7 @@
       "cgv": "Conditions générales de vente"
     },
     "header": {
+      "titlepage": "Albert Einstein, à la poursuite de la lumière",
       "title": "Albert Einstein",
       "subtitle": "À la poursuite de la lumière"
     },
@@ -153,6 +154,32 @@
       
       },
       "backtohome": "Retour à l'accueil"
+      },
+      "ticketing": {
+        "titlepage": "Billetterie",
+        "title": "Albert Einstein, à la poursuite de la lumière",
+        "subtitle": "Entrée gratuite sur réservation (e-ticket)",
+        "form": {
+          "name": "Nom",
+          "firstname": "Prénom",
+          "email": "Adresse e-mail",
+          "time": "Horaire",
+          "timeplaceholder": "Sélectionner l'heure",
+          "quantity": "Nombre de visiteurs",
+          "submit": "Confirmer la réservation",
+          "warning": "Les champs suivis d'un",
+          "warning2": "sont obligatoires.",
+          "terms": "En confirmant votre commande, vous acceptez les ",
+          "termslink": "conditions générales de vente",
+          "terms2": "et le traitement de vos données par l'agence Lunastra. Les galeries ferment 15 minutes avant l’heure officielle. Pour toute question, contactez-nous à l’adresse contact@lunastra.fr."
+        }
+      },
+      "exhibition": {
+        "title": "Exposition interactive",
+        "desktop": "À l'aide de votre curseur, cliquez sur les astres colorés pour découvrir quelques-unes des plus grandes découvertes des célèbres scientifiques à travers ce trou de verre.",
+        "button": "C'est parti!",
+        "mobile": "La version mobile n'est pas prise en charge. Veuillez visiter cette page sur un ordinateur pour profiter de l'expérience.",
+        "backtohome": "Retour à l'accueil"
       }
     }
   }

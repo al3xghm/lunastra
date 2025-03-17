@@ -1,4 +1,12 @@
-
+.exitButton{
+    position: absolute;
+    bottom: 20px;  
+    left: 20px;  
+    z-index: 1000; 
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: none;
+}
 
 .enterExperience {
     height: 100vh;
@@ -47,6 +55,10 @@
     max-width: 500px;
     min-width: 500px;
     position: relative;
+    opacity: 0; 
+    transform: translateY(-20px); 
+    animation: popupAnimation 0.5s ease-out forwards;
+
 
     .popupContentHeader {
         display: flex;
@@ -90,4 +102,16 @@
         }
     }
 
+}
+
+
+@keyframes popupAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
 }

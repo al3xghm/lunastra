@@ -5,8 +5,11 @@ import styles from "@/styles/billetterie.module.scss";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import Head from "next/head";
+import { useTranslations } from 'next-intl';
 
 export default function Billetterie() {
+      const t = useTranslations('home');
+    
     const [formData, setFormData] = useState({
         date: '',
         horaire: '',
@@ -62,7 +65,7 @@ export default function Billetterie() {
     return (
         <>
             <Head>
-                <title>Billetterie</title>
+                <title>{t('ticketing.titlepage')}</title>
             </Head>
             <Navbar />
             <main className={styles.mainContent}>
@@ -70,8 +73,8 @@ export default function Billetterie() {
                     <div className={styles.image}></div>
                     <form onSubmit={handleSubmit} className={styles.form}>
                         <div className={styles.header}>
-                            <h2>Albert Einstein, à la poursuite de la lumière</h2>
-                            <p>Entrée gratuite sur réservation (e-ticket)</p>
+                            <h2>{t('ticketing.title')}</h2>
+                            <p>{t('ticketing.subtitle')}</p>
                         </div>
                         <div className={styles.formGroup}>
                             <label>
@@ -84,10 +87,10 @@ export default function Billetterie() {
                             </label>
                             <label>
                                 <div>
-                                    Horaire <span className={styles.required}>*</span>
+                                  {t('ticketing.form.time')} <span className={styles.required}>*</span>
                                 </div>
                                 <select name="horaire" value={formData.horaire} onChange={handleChange} required>
-                                    <option value="">Sélectionner l'heure</option>
+                                    <option value="">{t('ticketing.form.timeplaceholder')}</option>
                                     {Array.from({ length: 9 }, (_, index) => {
                                         const hour = 10 + index;
                                         return (
@@ -101,7 +104,7 @@ export default function Billetterie() {
                         </div>
                         <label>
                             <div>
-                                Nombre de visiteurs <span className={styles.required}>*</span>
+                              {t('ticketing.form.quantity')} <span className={styles.required}>*</span>
                             </div>
                             <div className={styles.counter}>
                                 <button
@@ -132,36 +135,36 @@ export default function Billetterie() {
                         <div className={styles.formGroup}>
                             <label>
                                 <div>
-                                    Prénom <span className={styles.required}>*</span>
+                                  {t('ticketing.form.firstname')} <span className={styles.required}>*</span>
                                 </div>
                                 <input type="text" name="prenom" value={formData.prenom} onChange={handleChange}
-                                    placeholder="Prénom"
+                                    placeholder="John"
                                     required />
                             </label>
                             <label>
                                 <div>
-                                    Nom <span className={styles.required}>*</span>
+                                    {t('ticketing.form.name')} <span className={styles.required}>*</span>
                                 </div>
                                 <input type="text" name="nom" value={formData.nom} onChange={handleChange}
-                                    placeholder="Nom"
+                                    placeholder="Doe"
                                     required />
                             </label>
                         </div>
                         <label>
                             <div>
-                                Adresse mail <span className={styles.required}>*</span>
+                                Email <span className={styles.required}>*</span>
                             </div>
                             <input type="email" name="email" value={formData.email} onChange={handleChange}
                                 placeholder="example@mail.fr"
                                 required />
                         </label>
                         <div className={styles.messageGroup}>
-                            <p>Les champs suivis d'un <span className={styles.required}>*</span> sont obligatoires.</p>
+                            <p>{t('ticketing.form.warning')} <span className={styles.required}>*</span> {t('ticketing.form.warning2')}</p>
                             <br />
-                            <p>En confirmant votre commande, vous acceptez les <Link className={styles.link} href="/conditions-generales-de-vente">conditions générales de vente</Link> et le traitement de vos données par l'agence Lunastra. Les galeries ferment 15 minutes avant l’heure officielle. Pour toute question, contactez-nous à l’adresse contact@lunastra.fr.</p>
+                            <p>{t('ticketing.form.terms')} <Link className={styles.link} href="/conditions-generales-de-vente">{t('ticketing.form.termslink')}</Link> {t('ticketing.form.terms2')}</p>
                         </div>
                         <button className="button" type="submit">
-                            Confirmer la réservation →
+                            {t('ticketing.form.submit')} →
                         </button>
                     </form>
                 </div>
