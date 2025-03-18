@@ -45,7 +45,7 @@ export default function Billetterie() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://127.0.0.1:8888/lunastra_api/index.php', {
+            const response = await fetch('http://api.lunastra.ghmir.butmmi.o2switch.site/index.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
