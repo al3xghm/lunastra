@@ -309,7 +309,7 @@
   }
 
   .question {
-    // background-color: #f2f2f2;
+    color: inherit;
     background-color: transparent;
     border: none;
     padding: 10px;
@@ -320,7 +320,6 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    // transition: background-color 0.3s ease;
 
     svg {
       fill: white;

@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
                 <meta name="author" content="Lunastra" />                
                 <link rel="icon" href="/logo.png" />
             </Head>
-            <NextIntlClientProvider locale={locale} messages={pageProps.messages || {}}>
+            <NextIntlClientProvider timeZone="Europe/Paris" locale={locale} messages={pageProps.messages || {}}>
                 <Component {...pageProps} />
             </NextIntlClientProvider>
         </>

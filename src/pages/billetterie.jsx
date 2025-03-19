@@ -28,20 +28,6 @@ export default function Billetterie() {
         }));
     };
 
-    const increment = () => {
-        setFormData((prev) => ({
-            ...prev,
-            amount: Math.min(10, parseInt(prev.amount, 10) + 1)
-        }));
-    };
-
-    const decrement = () => {
-        setFormData((prev) => ({
-            ...prev,
-            amount: Math.max(1, parseInt(prev.amount, 10) - 1)
-        }));
-    };
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
