@@ -59,15 +59,19 @@ const Footer = () => {
         </div>
 
         <div className={styles.footer__agency}>
-          <h3>{t('footer.exhibitionTitle')}</h3>
+          <h3>{t('footer.exhibitionTitle')}
+            
+        <Image src="/lunastra.svg" alt="Logo" width={50} height={50} />
+          </h3>
           <p>{t('footer.agencyDescription')}</p>
 
           <div className={styles.footer__socials}>
             <p>{t('footer.socialsTitle')}</p>
             <div className={styles.footer__socials__links}>
-            <a href="#" aria-label="Instagram"><Image src="/Instagram.svg" alt="Instagram" width={25} height={25} /></a>
-            <a href="#" aria-label="X (Twitter)"><Image src="/X.svg" alt="X" width={25} height={25} /></a>
-            <a href="#" aria-label="Email"><Image src="/Mail.svg" alt="Email" width={25} height={25} /></a>
+            <a href="https://instagram.com/lunastra_alberteinstein" aria-label="Instagram"><Image src="/Instagram.svg" alt="Instagram" width={25} height={25} /></a>
+            <a href="https://x.com/lunastra_alberteinstein" aria-label="X (Twitter)"><Image src="/X.svg" alt="X" width={25} height={25} /></a>
+            <a href="https://facebook.com/lunastra_alberteinstein" aria-label="Facebook"><Image src="/Facebook.svg" alt="Facebook" width={25} height={25} /></a>
+            <a href="mailto:contact@lunastra.fr" aria-label="Email"><Image src="/Mail.svg" alt="Email" width={25} height={25} /></a>
             </div>
           </div>
         </div>

@@ -1,5 +1,15 @@
 .switchLanguage {
 
+  .arrowIcon {
+    svg {
+      transform: translate(-15px, 0px);
+      width: 10px;
+      height: 10px;
+      fill: white;
+      z-index: -1;
+    }
+  }
+
   .languageSelect {
     padding: 8px;
     font-size: 16px;
@@ -7,6 +17,7 @@
     border: none;
     background-color: inherit;
     color: inherit;
+    padding-right: 20px;
 
     @media screen and (max-width: 768px) {
       padding: 0;

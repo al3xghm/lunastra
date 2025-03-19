@@ -21,7 +21,7 @@ const End = () => {
                     <p>{t('end.error.content2')}</p>
                     <p>
                         {t('end.error.content3')}
-                        <a href="mailto:lunastra.contact@gmail.com"><strong>lunastra.contact@gmail.com</strong></a>.
+                        <a href="mailto:contact@lunastra.fr"><strong>contact@lunastra.fr</strong></a>.
                     </p>
 
                 </div>

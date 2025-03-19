@@ -17,12 +17,12 @@ export default function Home() {
   const t = useTranslations('home');
 
   const images = [
-    { src: '/Mono-AnneauEinstein.jpg', description: 'Description de l’image 1' },
-    { src: '/Mono-Decalage.jpg', description: 'Description de l’image 2' },
-    { src: '/JPEG-Eclipse.jpg', description: 'Description de l’image 3' },
-    { src: '/JPEG-GravityProbeB.jpg', description: 'Description de l’image 4' },
-    { src: '/JPEG-trounoir.jpg', description: 'Description de l’image 5' },
-    { src: '/JPEG-OndesGr.jpg', description: 'Description de l’image 6' },
+    { src: '/Mono-Decalage.jpg', description: 'Einstein\'s shift, a demonstration of general relativity through the deflection of light by gravity.' },
+    { src: '/Mono-eclipse.jpg', description: 'The 1919 eclipse, a key event that confirmed Einstein\'s general theory of relativity by observing the deflection of light by the Sun.' },
+    { src: '/Mono-AnneauEinstein.jpg', description: 'Einstein\'s ring, a gravitational lensing phenomenon that occurs when light from a distant object is bent by a massive foreground object.' },
+    { src: '/Mono-TrouNoir.jpg', description: 'Black holes, regions of space where gravity is so strong that not even light can escape.' },
+    { src: '/Mono-ProbeB.jpg', description: 'Gravity Probe B, a scientific mission that measured the effects of space-time curvature around Earth.' },
+    { src: '/Mono-OndesGR.jpg', description: 'Gravitational waves, ripples in space-time caused by extreme cosmic events, such as black hole mergers.' }
   ];
 
   const faqData = [1, 2, 3, 4];
@@ -46,30 +46,33 @@ export default function Home() {
   useEffect(() => {
     const videoElement = videoRef.current;
     const spans = titleRef.current.querySelectorAll("span");
-  
+
     gsap.set(spans, { color: "#999" });
-  
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const isMobile = window.innerWidth <= 768;
-  
+
       spans.forEach((span, index) => {
         const position = span.getBoundingClientRect().top;
-        const progress = Math.min(1, Math.max(0, (windowHeight - position) / windowHeight));
-  
+        const progress = Math.min(1, Math.max(0, (windowHeight * 0.7 - position) / (windowHeight * 0.1)));
+
+        // Ajustement pour atteindre le blanc plus haut
+        const adjustedProgress = Math.min(1, progress * 1.5); 
+
         gsap.to(span, {
-          color: `rgb(${progress * 255}, ${progress * 255}, ${progress * 255})`,
+          color: `rgb(${adjustedProgress * 255}, ${adjustedProgress * 255}, ${adjustedProgress * 255})`,
           duration: 0.2,
           ease: "power3.out",
         });
       });
-  
+
       if (!isMobile && videoElement) {
         const videoPosition = videoElement.getBoundingClientRect().top;
         if (videoPosition < windowHeight && videoPosition > 0) {
           const scale = Math.min(0.1 + (scrollY / windowHeight) * 0.7, 1);
-  
+
           gsap.to(videoElement, {
             scale: scale,
             duration: 0.5,
@@ -78,13 +81,13 @@ export default function Home() {
         }
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
 
 
   return (
@@ -183,7 +186,9 @@ export default function Home() {
             />
           ))}
         </div>
-        <p className={styles.carouselsubtitle}>{t('experience.carouselSubtitle')}<b> {t('experience.carouselSubtitle2')}</b></p>
+        <div className={styles.carouselsubtitle}>
+          <p>{t('experience.carouselSubtitle')}<b> {t('experience.carouselSubtitle2')}</b></p>
+        </div>
       </section>
       <section className={styles.faq}>
         <div className={styles.faqHeader}>
@@ -193,7 +198,7 @@ export default function Home() {
           {faqData.map((faqKey, index) => (
             <div key={index} className={`${styles.faqItem} ${activeQuestion === index ? styles.active : ''}`}>
               <button onClick={() => toggleAnswer(index)} className={styles.question}>
-                {t(`faq.question${faqKey}`)} 
+                {t(`faq.question${faqKey}`)}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                   <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
                 </svg>

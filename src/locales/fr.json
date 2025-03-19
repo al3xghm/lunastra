@@ -1,17 +1,17 @@
 {
   "home": {
     "navbar": {
-      "date": "01 Juin - 01 Septembre",
+      "date": "1er Juin - 1er Septembre",
       "ticketing": "Billetterie",
-      "exhibition": "Exposition interactive"
+      "exhibition": "Exposition Numerique"
     },
     "footer": {
       "title": "Albert Einstein,",
       "title2": "à la poursuite de la lumière",
-      "date": "01 Juin au 01 Septembre 2025",
+      "date": "Du 1er Juin au 1er Septembre 2025",
       "address": "2 Rue Albert Einstein,",
       "entryInfo": "Entrée gratuite sur réservation",
-      "exhibitionTitle": "Une exposition immersive exclusive proposée par ★ Lunastra",
+      "exhibitionTitle": "Une exposition immersive exclusive proposée par ",
       "agencyDescription": "Lunastra est une agence de communication spécialisée dans la culture de l’univers et de l’espace",
       "socialsTitle": "Retrouvez-nous sur",
       "copyright": "© 2025, Lunastra, Tous droits réservés",
@@ -42,7 +42,7 @@
       "titlePart4": "immersive",
       "descriptionTitle": "L'exposition \"À la poursuite de la lumière\" vous invite à explorer les travaux d'Albert Einstein à travers une expérience immersive et interactive.",
       "descriptionBody": "Plongez-vous au cœur de la relativité générale et de la théorie des quanta, et découvrez les révolutions scientifiques qui ont marqué le XXe siècle.",
-      "exploreButton": "Découvrir l'exposition interactive",
+      "exploreButton": "Découvrir l'exposition numerique",
       "carouselSubtitle": "Venez vivre les découvertes d'Albert Einstein à travers une exposition immersive,",
       "carouselSubtitle2": "à quelques minutes de Paris"
     },
@@ -61,7 +61,7 @@
       "company": "Nom de l'entreprise — Lunastra",
       "status": "Statut juridique — Association loi de 1901",
       "address": "Adresse — 2 Rue Albert Einstein, 77420 Champs-sur-Marne",
-      "email": "Adresse e-mail — lunastra.contact@gmail.com",
+      "email": "Adresse e-mail — contact@lunastra.fr",
       "director": "Directeur de la publication — Alexandre Ghmir",
       "host": "Hébergeur — VERCEL, dont le siège social est situé VERCEL INTERNATIONAL LTD, 61 Lordou Vironos Street, 6023 Larnaca, Chypre, joignable par le moyen suivant : vercel.com/contact.",
         "privacyPolicy": {
@@ -90,7 +90,7 @@
             },
             {
               "title": "Droit d'accès et de rectification des données personnelles",
-              "content": "Vous avez le droit de demander l'accès et la rectification de vos données personnelles. Pour ce faire, veuillez nous contacter à l'adresse e-mail lunastra.contact@gmail.com ou à l'adresse postale indiquée ci-dessus (voir mentions légales)."
+              "content": "Vous avez le droit de demander l'accès et la rectification de vos données personnelles. Pour ce faire, veuillez nous contacter à l'adresse e-mail contact@lunastra.fr ou à l'adresse postale indiquée ci-dessus (voir mentions légales)."
             },
             {
               "title": "Modification de la politique de confidentialité",
@@ -175,7 +175,7 @@
         }
       },
       "exhibition": {
-        "title": "Exposition interactive",
+        "title": "Exposition Numerique",
         "desktop": "À l'aide de votre curseur, cliquez sur les astres colorés pour découvrir quelques-unes des plus grandes découvertes du célèbre scientifique à travers ce trou de verre.",
         "button": "C'est parti!",
         "mobile": "La version mobile n'est pas prise en charge. Veuillez visiter cette page sur un ordinateur pour profiter de l'expérience.",

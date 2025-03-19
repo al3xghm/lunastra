@@ -1,17 +1,17 @@
 {
   "home": {
     "navbar": {
-      "date": "June 01 - September 01",
+      "date": "June 1 - September 1",
       "ticketing": "Ticketing",
-      "exhibition": "Interactive Exhibition"
+      "exhibition": "Digital Exhibition"
     },
     "footer": {
       "title": "Albert Einstein,",
       "title2": "In Pursuit of Light",
-      "date": "June 01 to September 01, 2025",
+      "date": "From June 1 to September 1, 2025",
       "address": "2 Rue Albert Einstein,",
       "entryInfo": "Free entry by reservation",
-      "exhibitionTitle": "An immersive exclusive exhibition presented by ★ Lunastra",
+      "exhibitionTitle": "An immersive exclusive exhibition presented by ",
       "agencyDescription": "Lunastra is a communication agency specialized in the culture of the universe and space",
       "socialsTitle": "Follow us on",
       "copyright": "© 2025, Lunastra, All rights reserved",
@@ -42,7 +42,7 @@
       "titlePart4": "experience",
       "descriptionTitle": "The exhibition \"In Pursuit of Light\" invites you to explore Albert Einstein's works through an immersive and interactive experience.",
       "descriptionBody": "Dive into the heart of general relativity and quantum theory, and discover the scientific revolutions that shaped the 20th century.",
-      "exploreButton": "Discover the interactive exhibition",
+      "exploreButton": "Discover the digital exhibition",
       "carouselSubtitle": "Come experience Albert Einstein's discoveries in an immersive exhibition,",
       "carouselSubtitle2": "just a few minutes from Paris"
     },
@@ -61,7 +61,7 @@
       "company": "Company Name — Lunastra",
       "status": "Legal Status — 1901 Law Association",
       "address": "Address — 2 Rue Albert Einstein, 77420 Champs-sur-Marne",
-      "email": "Email Address — lunastra.contact@gmail.com",
+      "email": "Email Address — contact@lunastra.fr",
       "director": "Publication Director — Alexandre Ghmir",
       "host": "Host — VERCEL, whose registered office is located at VERCEL INTERNATIONAL LTD, 61 Lordou Vironos Street, 6023 Larnaca, Cyprus, reachable through the following: vercel.com/contact.",
       "privacyPolicy": {
@@ -90,7 +90,7 @@
           },
           {
             "title": "Right of access and rectification of personal data",
-            "content": "You have the right to request access and rectification of your personal data. To do so, please contact us at the email address lunastra.contact@gmail.com or the postal address listed above (see legal notices)."
+            "content": "You have the right to request access and rectification of your personal data. To do so, please contact us at the email address contact@lunastra.fr or the postal address listed above (see legal notices)."
           },
           {
             "title": "Changes to the privacy policy",
@@ -171,7 +171,7 @@
         }
       },
       "exhibition": {
-        "title": "Interactive Exhibition",
+        "title": "Digital Exhibition",
         "desktop": "Using your cursor, click on the colored celestial bodies to discover some of the greatest discoveries of the famous scientist through this wormhole.",
         "button": "Let's go!",
         "mobile": "The mobile version is not supported. Please visit this page on a computer to enjoy the experience.",

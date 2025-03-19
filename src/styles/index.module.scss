@@ -56,9 +56,17 @@
     font-size: 3rem;
   }
 
+  q::before {
+    content: "“";
+  }
+
+  q::after {
+    content: "”";
+  }
+
   p {
     text-align: right;
-}
+  }
 }
 
 .teaser {
@@ -74,8 +82,10 @@
 }
 
 .about {
-  gap: 3rem;
+  gap: 4rem;
   padding: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -141,6 +151,7 @@
     flex-direction: column;
     padding: 2rem;
     margin: 4rem auto;
+    max-width: 1280px;
     width: 100%;
 
     span {
@@ -166,6 +177,8 @@
     gap: 5rem;
     padding: 2rem;
     align-items: flex-end;
+    max-width: 1280px;
+    margin: 0 auto;
 
     p {
       font-size: 1.25rem;
@@ -216,12 +229,15 @@
   }
 
   .carouselsubtitle {
-    max-width: 500px;
-    margin-left: auto;
-    margin-bottom: 10rem;
-    margin-top: 3rem;
-    margin-right: 2rem;
+    max-width: 1280px;
+    width: 100%;
+    margin: 3rem auto 10rem;
     font-size: 1.1rem;
+
+    p {
+    margin-left: auto;
+      max-width: 500px;
+    }
   }
 }
 
@@ -261,7 +277,7 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  mix-blend-mode: difference;
+  color: white;
 }
 
 .modalContent .description {
@@ -362,18 +378,27 @@
 
   .teaser {
     margin: 1rem auto;
+
+    .video {
+      transform: scale(1, 1);
+    }
   }
 
   .subheader {
     margin: 3rem auto;
     gap: 1rem;
+    padding: 2rem;
 
     h3 {
       font-size: 1rem;
     }
 
-    p {
+    q {
       font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.7rem;
     }
   }
 
@@ -400,6 +425,7 @@
     .title {
       margin: 0;
       padding: 20px;
+
       span {
         font-size: 2rem;
       }
@@ -426,7 +452,10 @@
     }
 
     .carouselsubtitle {
-      margin: 2rem;
+      // margin: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+      max-width: 90vw;
     }
   }
 
@@ -450,6 +479,7 @@
 
     .faqItem {
       padding: 15px;
+
       button {
         padding: 0;
         font-size: 1rem;

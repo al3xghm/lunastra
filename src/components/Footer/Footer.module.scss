@@ -35,6 +35,12 @@
 
     &__agency {
 
+      img {
+        height: 1rem;
+        width: auto;
+        margin-left: 5px;
+      }
+
       p{
         margin-top: 1rem;
       }
@@ -62,7 +68,13 @@
       &__links {
         display: flex;
         margin-top: 1rem;
-        gap: 2rem;
+        gap: 1rem;
+
+        img {
+          height: 1.5rem;
+          width: auto;
+          margin: 0;
+        }
       }
     }
     

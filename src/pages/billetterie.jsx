@@ -8,8 +8,8 @@ import Head from "next/head";
 import { useTranslations } from 'next-intl';
 
 export default function Billetterie() {
-      const t = useTranslations('home');
-    
+    const t = useTranslations('home');
+
     const [formData, setFormData] = useState({
         date: '',
         horaire: '',
@@ -56,13 +56,14 @@ export default function Billetterie() {
             <Navbar />
             <main className={styles.mainContent}>
                 <div className={styles.twodiv}>
-                    <div className={styles.image}></div>
+                    {/* <div className={styles.image}></div> */}
+                    <Image src="/affiche.jpg" alt="Billetterie" width={800} height={600} className={styles.image} />
                     <form onSubmit={handleSubmit} className={styles.form}>
                         <div className={styles.header}>
                             <h2>{t('ticketing.title')}</h2>
                             <p>{t('ticketing.subtitle')}</p>
                             <div className={styles.messageGroup}>
-                            <span>{t('ticketing.form.warning')} <span className={styles.required}> *</span> {t('ticketing.form.warning2')}</span>
+                                <span>{t('ticketing.form.warning')} <span className={styles.required}> *</span> {t('ticketing.form.warning2')}</span>
                             </div>
                         </div>
                         <div className={styles.formGroup}>
@@ -70,30 +71,35 @@ export default function Billetterie() {
                                 <div>
                                     Date <span className={styles.required}>*</span>
                                 </div>
-                                <input type="date" name="date" value={formData.date} onChange={handleChange}
-                                    placeholder="jj/mm/aaaa"
-                                    required />
+                                    <input type="date" name="date" value={formData.date} onChange={handleChange}
+                                        placeholder="jj/mm/aaaa"
+                                        required />
                             </label>
                             <label>
                                 <div>
-                                  {t('ticketing.form.time')} <span className={styles.required}>*</span>
+                                    {t('ticketing.form.time')} <span className={styles.required}>*</span>
                                 </div>
-                                <select name="horaire" value={formData.horaire} onChange={handleChange} required>
-                                    <option value="">{t('ticketing.form.timeplaceholder')}</option>
-                                    {Array.from({ length: 9 }, (_, index) => {
-                                        const hour = 10 + index;
-                                        return (
-                                            <option key={hour} value={`${hour < 10 ? '0' : ''}${hour}:00`}>
-                                                {`${hour < 10 ? '0' : ''}${hour}:00`}
-                                            </option>
-                                        );
-                                    })}
-                                </select>
+                                <div className={styles.dateSelect}>
+                                    <select name="horaire" value={formData.horaire} onChange={handleChange} required>
+                                        <option value="">{t('ticketing.form.timeplaceholder')}</option>
+                                        {Array.from({ length: 9 }, (_, index) => {
+                                            const hour = 10 + index;
+                                            return (
+                                                <option key={hour} value={`${hour < 10 ? '0' : ''}${hour}:00`}>
+                                                    {`${hour < 10 ? '0' : ''}${hour}:00`}
+                                                </option>
+                                            );
+                                        })}
+                                    </select>
+                                    <span className={styles.arrowIcon}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg></span>
+
+                                </div>
+
                             </label>
                         </div>
                         <label>
                             <div>
-                              {t('ticketing.form.quantity')} <span className={styles.required}>*</span>
+                                {t('ticketing.form.quantity')} <span className={styles.required}>*</span>
                             </div>
                             <div className={styles.counter}>
                                 <button
@@ -124,7 +130,7 @@ export default function Billetterie() {
                         <div className={styles.formGroup}>
                             <label>
                                 <div>
-                                  {t('ticketing.form.firstname')} <span className={styles.required}>*</span>
+                                    {t('ticketing.form.firstname')} <span className={styles.required}>*</span>
                                 </div>
                                 <input type="text" name="prenom" value={formData.prenom} onChange={handleChange}
                                     placeholder="John"
