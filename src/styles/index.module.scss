@@ -50,12 +50,15 @@
     font-size: 1.25rem;
   }
 
-  p {
+  q {
     text-align: center;
     font-weight: 600;
-    text-transform: uppercase;
     font-size: 3rem;
   }
+
+  p {
+    text-align: right;
+}
 }
 
 .teaser {
@@ -132,7 +135,6 @@
 .experience {
   display: flex;
   flex-direction: column;
-  margin: 4rem auto;
 
   .title {
     display: flex;
@@ -143,8 +145,7 @@
 
     span {
       text-transform: uppercase;
-      font-size: 9vw;
-      font-weight: 500;
+      font-size: 7vw;
       line-height: 0.95;
       text-align: end;
 
@@ -220,6 +221,7 @@
     margin-bottom: 10rem;
     margin-top: 3rem;
     margin-right: 2rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -330,9 +332,7 @@
     }
   }
 
-  .question:hover {
-    // background-color: #ddd;
-  }
+
 
   .answer {
     max-height: 0;

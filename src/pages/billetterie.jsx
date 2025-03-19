@@ -75,6 +75,9 @@ export default function Billetterie() {
                         <div className={styles.header}>
                             <h2>{t('ticketing.title')}</h2>
                             <p>{t('ticketing.subtitle')}</p>
+                            <div className={styles.messageGroup}>
+                            <span>{t('ticketing.form.warning')} <span className={styles.required}> *</span> {t('ticketing.form.warning2')}</span>
+                            </div>
                         </div>
                         <div className={styles.formGroup}>
                             <label>
@@ -159,8 +162,6 @@ export default function Billetterie() {
                                 required />
                         </label>
                         <div className={styles.messageGroup}>
-                            <p>{t('ticketing.form.warning')} <span className={styles.required}>*</span> {t('ticketing.form.warning2')}</p>
-                            <br />
                             <p>{t('ticketing.form.terms')} <Link className={styles.link} href="/conditions-generales-de-vente">{t('ticketing.form.termslink')}</Link> {t('ticketing.form.terms2')}</p>
                         </div>
                         <button className="button" type="submit">

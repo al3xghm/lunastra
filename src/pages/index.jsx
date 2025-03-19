@@ -17,11 +17,12 @@ export default function Home() {
   const t = useTranslations('home');
 
   const images = [
-    { src: '/slider1.webp', description: 'Description de l’image 1' },
-    { src: '/slider2.webp', description: 'Ancien manuscrit rédigé par Albert Einstein' },
-    { src: '/slider3.webp', description: 'Chandrasekhar Subrahmanyan devant ses instruments, éclipse de 1919' },
-    { src: '/slider4.webp', description: 'Description de l’image 4' },
-    { src: '/slider5.webp', description: 'Résidence de Caputh, lieu de réflexion' }
+    { src: '/JPEG-AnneauEinstein.jpg', description: 'Description de l’image 1' },
+    { src: '/JPEG-Decalage.jpg', description: 'Description de l’image 2' },
+    { src: '/JPEG-Eclipse.jpg', description: 'Description de l’image 3' },
+    { src: '/JPEG-GravityProbeB.jpg', description: 'Description de l’image 4' },
+    { src: '/JPEG-trounoir.jpg', description: 'Description de l’image 5' },
+    { src: '/JPEG-OndesGr.jpg', description: 'Description de l’image 6' },
   ];
 
   const faqData = [1, 2, 3, 4];
@@ -42,51 +43,48 @@ export default function Home() {
 
   const videoRef = useRef(null);
   const titleRef = useRef(null);
-
   useEffect(() => {
     const videoElement = videoRef.current;
     const spans = titleRef.current.querySelectorAll("span");
-
-    gsap.set(spans, { opacity: 0 });
-
+  
+    gsap.set(spans, { color: "#999" });
+  
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const isMobile = window.innerWidth <= 768;
-
+  
       spans.forEach((span, index) => {
         const position = span.getBoundingClientRect().top;
-        const triggerPoint = windowHeight - 100; 
-
-        if (position < triggerPoint) {
-          gsap.to(span, {
-            opacity: 1, 
-            duration: 0.8,
-            delay: index * 0.2, 
-            ease: "power3.out",
-          });
-        }
+        const progress = Math.min(1, Math.max(0, (windowHeight - position) / windowHeight));
+  
+        gsap.to(span, {
+          color: `rgb(${progress * 255}, ${progress * 255}, ${progress * 255})`,
+          duration: 0.2,
+          ease: "power3.out",
+        });
       });
-
-      if (!isMobile) {
-
+  
+      if (!isMobile && videoElement) {
         const videoPosition = videoElement.getBoundingClientRect().top;
         if (videoPosition < windowHeight && videoPosition > 0) {
-          const scale = Math.min(0.1 + (scrollY / windowHeight) * 0.7, 1); 
-
+          const scale = Math.min(0.1 + (scrollY / windowHeight) * 0.7, 1);
+  
           gsap.to(videoElement, {
             scale: scale,
             duration: 0.5,
+            ease: "power3.out",
           });
         }
-      };
+      }
     };
-
+  
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
 
 
   return (
@@ -107,9 +105,10 @@ export default function Home() {
       </header>
       <section className={styles.subheader}>
         <h3>{t('subheader.title')}</h3>
-        <p>
+        <q>
           {t('subheader.description')}
-        </p>
+        </q>
+        <p>Albert Einstein, Physics and Reality (1936)</p>
       </section>
       <section className={styles.teaser}>
         <video
@@ -146,16 +145,16 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.bottomleftcontent}>
-          <small>
+          <p>
             {t('about.imgfooter')}
-          </small>
+          </p>
         </div>
       </section>
       <section className={styles.experience}>
         <h1 ref={titleRef} className={styles.title}>
           <span>{t('experience.titlePart1')}</span>
           <span>{t('experience.titlePart2')}</span>
-          <span className="aurora">{t('experience.titlePart3')}</span>
+          <span>{t('experience.titlePart3')}</span>
           <span>{t('experience.titlePart4')}</span>
         </h1>
         <Image className={styles.video} src="/expovisu.png" alt="Experience" width={500} height={500} />
