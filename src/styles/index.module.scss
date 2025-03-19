@@ -452,7 +452,6 @@
     }
 
     .carouselsubtitle {
-      // margin: 2rem;
       margin-top: 2rem;
       margin-bottom: 5rem;
       max-width: 90vw;
@@ -461,6 +460,10 @@
 
   .modalContent {
     max-width: 90vw;
+
+    img {
+      height: auto;
+    }
   }
 
   .faq {
