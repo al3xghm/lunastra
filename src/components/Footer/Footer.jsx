@@ -70,7 +70,6 @@ const Footer = () => {
             <div className={styles.footer__socials__links}>
             <a href="https://instagram.com/lunastra_alberteinstein" aria-label="Instagram"><Image src="/Instagram.svg" alt="Instagram" width={25} height={25} /></a>
             <a href="https://x.com/lunastra_alberteinstein" aria-label="X (Twitter)"><Image src="/X.svg" alt="X" width={25} height={25} /></a>
-            <a href="https://facebook.com/lunastra_alberteinstein" aria-label="Facebook"><Image src="/Facebook.svg" alt="Facebook" width={25} height={25} /></a>
             <a href="mailto:contact@lunastra.fr" aria-label="Email"><Image src="/Mail.svg" alt="Email" width={25} height={25} /></a>
             </div>
           </div>

@@ -56,7 +56,6 @@ export default function Billetterie() {
             <Navbar />
             <main className={styles.mainContent}>
                 <div className={styles.twodiv}>
-                    {/* <div className={styles.image}></div> */}
                     <Image src="/affiche.jpg" alt="Billetterie" width={800} height={600} className={styles.image} />
                     <form onSubmit={handleSubmit} className={styles.form}>
                         <div className={styles.header}>

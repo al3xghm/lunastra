@@ -58,7 +58,6 @@ export default function Home() {
         const position = span.getBoundingClientRect().top;
         const progress = Math.min(1, Math.max(0, (windowHeight * 0.7 - position) / (windowHeight * 0.1)));
 
-        // Ajustement pour atteindre le blanc plus haut
         const adjustedProgress = Math.min(1, progress * 1.5); 
 
         gsap.to(span, {
@@ -160,7 +159,7 @@ export default function Home() {
           <span>{t('experience.titlePart3')}</span>
           <span>{t('experience.titlePart4')}</span>
         </h1>
-        <Image className={styles.video} src="/expovisu.png" alt="Experience" width={500} height={500} />
+        <Image className={styles.video} src="/expo.gif" alt="Experience" width={500} height={500} />
         <div className={styles.description}>
           <p>
             <b>{t('experience.descriptionTitle')}</b>
@@ -213,7 +212,6 @@ export default function Home() {
       </section>
       <Footer />
 
-      {/* Modale d'agrandissement */}
       {isModalOpen && activeImage && (
         <div className={styles.modal}>
           <div className={styles.modalContent}>
