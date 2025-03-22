@@ -62,7 +62,7 @@ export default function Home() {
 
         gsap.to(span, {
           color: `rgb(${adjustedProgress * 255}, ${adjustedProgress * 255}, ${adjustedProgress * 255})`,
-          duration: 0.2,
+          duration: 1.5,
           ease: "power3.out",
         });
       });
@@ -159,7 +159,9 @@ export default function Home() {
           <span>{t('experience.titlePart3')}</span>
           <span>{t('experience.titlePart4')}</span>
         </h1>
-        <Image className={styles.video} src="/expo.gif" alt="Experience" width={500} height={500} />
+        <video className={styles.video} autoPlay loop muted playsInline>
+          <source src="/exponum.mp4" type="video/mp4" />
+          </video>
         <div className={styles.description}>
           <p>
             <b>{t('experience.descriptionTitle')}</b>
