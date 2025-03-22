@@ -10,7 +10,7 @@ export const Navbar = () => {
     const t = useTranslations('home');
     return (
         <>
-            <Link href="/" className={styles.responsiveLogo}>
+            <Link href="/" className={styles.responsiveLogo} title={t('navbar.home')}>
                 <img src="/logo.svg" alt="Logo Lunastra" width={50} height={50} />
             </Link>
             <button className={styles.hamburger} onClick={() => setIsOpen(!isOpen)}><svg width="31" height="21" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,8 +47,8 @@ export const Navbar = () => {
                         </div>
 
                         <div className={styles.links}>
-                            <Link href="/billetterie">{t('navbar.ticketing')} →</Link>
-                            <Link href="/exposition">{t('navbar.exhibition')} →</Link>
+                            <Link href="/billetterie" title={t('navbar.ticketing')}>{t('navbar.ticketing')} →</Link>
+                            <Link href="/exposition" title={t('navbar.exhibition')}>{t('navbar.exhibition')} →</Link>
                         </div>
                     </div>
                 )
@@ -76,8 +76,8 @@ export const Navbar = () => {
                 </div>
 
                 <div className={styles.links}>
-                    <Link href="/billetterie">{t('navbar.ticketing')} →</Link>
-                    <Link href="/exposition">{t('navbar.exhibition')} →</Link>
+                    <Link href="/billetterie" title={t('navbar.ticketing')}>{t('navbar.ticketing')} →</Link>
+                    <Link href="/exposition" title={t('navbar.exhibition')}>{t('navbar.exhibition')} →</Link>
                 </div>
             </nav>
         </>

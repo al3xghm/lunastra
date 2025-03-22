@@ -261,6 +261,7 @@ const Exposition = () => {
                         <><p>{t('exhibition.desktop')}</p>
                             <button
                                 className='button'
+                                title={t('exhibition.button')}
                                 onClick={() => {
                                     setShowCanvas(true);
                                     document.getElementById('enterButton').style.display = 'none';
@@ -277,7 +278,7 @@ const Exposition = () => {
                 showCanvas && <canvas className='canvas' ref={canvasRef}>
                 </canvas>
             }
-            <button id='exitButton' className={`button ${styles.exitButton}`} onClick={() => window.location.href = '/'}>
+            <button id='exitButton' title={t('exhibition.backtohome')} className={`button ${styles.exitButton}`} onClick={() => window.location.href = '/'}>
                             ← {t('exhibition.backtohome')}
                     </button>
 

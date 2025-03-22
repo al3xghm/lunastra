@@ -1,6 +1,7 @@
 {
   "home": {
     "navbar": {
+      "home": "Home",
       "date": "June 1 - September 1",
       "ticketing": "Ticketing",
       "exhibition": "Digital Exhibition"

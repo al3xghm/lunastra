@@ -154,9 +154,9 @@ export default function Billetterie() {
                                 required />
                         </label>
                         <div className={styles.messageGroup}>
-                            <p>{t('ticketing.form.terms')} <Link className={styles.link} href="/conditions-generales-de-vente">{t('ticketing.form.termslink')}</Link> {t('ticketing.form.terms2')}</p>
+                            <p>{t('ticketing.form.terms')} <Link className={styles.link} title={t('ticketing.form.termslink')} href="/conditions-generales-de-vente">{t('ticketing.form.termslink')}</Link> {t('ticketing.form.terms2')}</p>
                         </div>
-                        <button className="button" type="submit">
+                        <button className="button" type="submit" title={t('ticketing.form.submit')}>
                             {t('ticketing.form.submit')} →
                         </button>
                     </form>

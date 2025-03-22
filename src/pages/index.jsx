@@ -133,7 +133,7 @@ export default function Home() {
             <br />
             {t('about.ticketInfo')}
           </p>
-          <Link href="/billetterie" className="button">
+          <Link href="/billetterie" className="button" title={t('about.reserveButton')}>
             {t('about.reserveButton')} →
           </Link>
           <div className={styles.image}>
@@ -168,7 +168,7 @@ export default function Home() {
             <br />
             {t('experience.descriptionBody')}
           </p>
-          <Link href="/exposition" className="button">
+          <Link href="/exposition" className="button" title={t('experience.exploreButton')}>
             {t('experience.exploreButton')} →
           </Link>
         </div>

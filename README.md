@@ -1,4 +1,4 @@
-# Installation de Lunastra - Albert Einstein
+# Installation du site de l'Exposition
 
 ## Prérequis
 Avant de commencer, assurez-vous d'avoir installé les éléments suivants :

@@ -1,9 +1,10 @@
 {
   "home": {
     "navbar": {
+      "home": "Accueil",
       "date": "1er Juin - 1er Septembre",
       "ticketing": "Billetterie",
-      "exhibition": "Exposition Numerique"
+      "exhibition": "Exposition Numérique"
     },
     "footer": {
       "title": "Albert Einstein,",
@@ -42,7 +43,7 @@
       "titlePart4": "immersive",
       "descriptionTitle": "L'exposition \"À la poursuite de la lumière\" vous invite à explorer les travaux d'Albert Einstein à travers une expérience immersive et interactive.",
       "descriptionBody": "Plongez-vous au cœur de la relativité générale et de la théorie des quanta, et découvrez les révolutions scientifiques qui ont marqué le XXe siècle.",
-      "exploreButton": "Découvrir l'exposition numerique",
+      "exploreButton": "Découvrir l'exposition numérique",
       "carouselSubtitle": "Venez vivre les découvertes d'Albert Einstein à travers une exposition immersive,",
       "carouselSubtitle2": "à quelques minutes de Paris"
     },
@@ -177,7 +178,7 @@
         }
       },
       "exhibition": {
-        "title": "Exposition Numerique",
+        "title": "Exposition Numérique",
         "description": "Découvrez les travaux d'Albert Einstein à travers une expérience immersive et interactive.",
         "desktop": "À l'aide de votre curseur, cliquez sur les astres colorés pour découvrir quelques-unes des plus grandes découvertes du célèbre scientifique à travers ce trou de verre.",
         "button": "C'est parti!",
