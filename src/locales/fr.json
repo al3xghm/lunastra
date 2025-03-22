@@ -29,7 +29,7 @@
     },
     "about": {
       "sectionTitle": "À la poursuite de la lumière, une exposition des travaux d'Albert Einstein",
-      "paragraph": "À l'ère des deepfakes et de l'intelligence artificielle générative, la fiabilité de nos perceptions sensorielles est mise à mal. Nous vivons désormais dans une société post-vérité où la frontière entre réalité et illusion s'estompe progressivement. Les technologies de pointe inondent nos flux d'actualités de spéculations non vérifiables, souvent générées par des algorithmes anonymes. \n\nNotre présence en ligne est devenue une mise en scène méticuleusement orchestrée, un reflet de la société du selfie. Les réseaux sociaux prospèrent grâce à l'auto-promotion et à la recherche incessante de validation à travers les likes et les abonnés. Le contenu que nous consommons et créons est toujours plus standardisé sous l'effet des influenceurs et des algorithmes, créant une disjonction entre nos personas numériques et nos identités authentiques.",
+      "paragraph": "Notre perception du temps et de l’espace a été bouleversée par les découvertes d’Albert Einstein. Avec la relativité restreinte, il a démontré que le temps n’est pas absolu, mais qu’il s’écoule différemment selon la vitesse d’un observateur. La relativité générale a ensuite révélé que la gravité déforme l’espace-temps, influençant ainsi le parcours de la lumière et la structure même de l’univers. De l’expérience du train en mouvement à la courbure gravitationnelle des rayons lumineux, cette exposition vous invite à explorer ces concepts fascinants qui ont changé notre compréhension du monde.",
       "ticketInfo": "Entrée gratuite sur réservation",
       "allaudience": "Tous public",
       "reserveButton": "Réservez vos places",
@@ -58,6 +58,7 @@
     },
     "legal": {
       "title": "Mentions légales",
+      "description": "Ce site est édité par l'agence Lunastra. Une agence de communication spécialisée dans la culture de l'univers et de l'espace.",
       "company": "Nom de l'entreprise — Lunastra",
       "status": "Statut juridique — Association loi de 1901",
       "address": "Adresse — 2 Rue Albert Einstein, 77420 Champs-sur-Marne",
@@ -157,6 +158,7 @@
       },
       "ticketing": {
         "titlepage": "Billetterie",
+        "description": "Réservez vos billets pour l'exposition \"À la poursuite de la lumière\" et découvrez les révolutions scientifiques qui ont marqué le XXe siècle.",
         "title": "Albert Einstein, à la poursuite de la lumière",
         "subtitle": "Entrée gratuite sur réservation (e-ticket)",
         "form": {
@@ -176,6 +178,7 @@
       },
       "exhibition": {
         "title": "Exposition Numerique",
+        "description": "Découvrez les travaux d'Albert Einstein à travers une expérience immersive et interactive.",
         "desktop": "À l'aide de votre curseur, cliquez sur les astres colorés pour découvrir quelques-unes des plus grandes découvertes du célèbre scientifique à travers ce trou de verre.",
         "button": "C'est parti!",
         "mobile": "La version mobile n'est pas prise en charge. Veuillez visiter cette page sur un ordinateur pour profiter de l'expérience.",

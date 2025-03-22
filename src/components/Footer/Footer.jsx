@@ -52,7 +52,7 @@ const Footer = () => {
 
       <div className={styles.footer__content}>
         <div className={styles.footer__info}>
-          <h3>{t('footer.title')}<br/>{t('footer.title2')}</h3>
+          <h2>{t('footer.title')}<br/>{t('footer.title2')}</h2>
           <br /><p>{t('footer.date')}</p>
           <br /><p>{t('footer.address')}<br/> 77420 Champs-sur-Marne</p>
           <br /><p>{t('footer.entryInfo')}</p>
@@ -68,8 +68,8 @@ const Footer = () => {
           <div className={styles.footer__socials}>
             <p>{t('footer.socialsTitle')}</p>
             <div className={styles.footer__socials__links}>
-            <a href="https://instagram.com/lunastra_alberteinstein" aria-label="Instagram"><Image src="/Instagram.svg" alt="Instagram" width={25} height={25} /></a>
-            <a href="https://x.com/lunastra_alberteinstein" aria-label="X (Twitter)"><Image src="/X.svg" alt="X" width={25} height={25} /></a>
+            <a href="https://instagram.com/lunastra_alberteinstein" target="_blank" aria-label="Instagram"><Image src="/Instagram.svg" alt="Instagram" width={25} height={25} /></a>
+            <a href="https://x.com/lunastra_alberteinstein" target="_blank" aria-label="X (Twitter)"><Image src="/X.svg" alt="X" width={25} height={25} /></a>
             <a href="mailto:contact@lunastra.fr" aria-label="Email"><Image src="/Mail.svg" alt="Email" width={25} height={25} /></a>
             </div>
           </div>

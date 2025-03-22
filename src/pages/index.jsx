@@ -17,12 +17,12 @@ export default function Home() {
   const t = useTranslations('home');
 
   const images = [
-    { src: '/Mono-Decalage.jpg', description: 'Einstein\'s shift, a demonstration of general relativity through the deflection of light by gravity.' },
-    { src: '/Mono-eclipse.jpg', description: 'The 1919 eclipse, a key event that confirmed Einstein\'s general theory of relativity by observing the deflection of light by the Sun.' },
-    { src: '/Mono-AnneauEinstein.jpg', description: 'Einstein\'s ring, a gravitational lensing phenomenon that occurs when light from a distant object is bent by a massive foreground object.' },
-    { src: '/Mono-TrouNoir.jpg', description: 'Black holes, regions of space where gravity is so strong that not even light can escape.' },
-    { src: '/Mono-ProbeB.jpg', description: 'Gravity Probe B, a scientific mission that measured the effects of space-time curvature around Earth.' },
-    { src: '/Mono-OndesGR.jpg', description: 'Gravitational waves, ripples in space-time caused by extreme cosmic events, such as black hole mergers.' }
+    { src: '/Mono-Decalage.webp', description: 'Einstein\'s shift, a demonstration of general relativity through the deflection of light by gravity.' },
+    { src: '/Mono-eclipse.webp', description: 'The 1919 eclipse, a key event that confirmed Einstein\'s general theory of relativity by observing the deflection of light by the Sun.' },
+    { src: '/Mono-AnneauEinstein.webp', description: 'Einstein\'s ring, a gravitational lensing phenomenon that occurs when light from a distant object is bent by a massive foreground object.' },
+    { src: '/Mono-TrouNoir.webp', description: 'Black holes, regions of space where gravity is so strong that not even light can escape.' },
+    { src: '/Mono-ProbeB.webp', description: 'Gravity Probe B, a scientific mission that measured the effects of space-time curvature around Earth.' },
+    { src: '/Mono-OndesGR.webp', description: 'Gravitational waves, ripples in space-time caused by extreme cosmic events, such as black hole mergers.' }
   ];
 
   const faqData = [1, 2, 3, 4];
@@ -98,15 +98,14 @@ export default function Home() {
       </Head>
       <Navbar />
       <header className={styles.header}>
-        <h1 className="aurora">Albert
-          <br />Einstein</h1>
+        <h1 className="aurora">Albert<br />Einstein</h1>
         <h2>
           {t('header.subtitle')}
         </h2>
         <ThreeBackground />
       </header>
       <section className={styles.subheader}>
-        <h3>{t('subheader.title')}</h3>
+        <h2>{t('subheader.title')}</h2>
         <q>
           {t('subheader.description')}
         </q>
@@ -114,7 +113,7 @@ export default function Home() {
       </section>
       <section className={styles.teaser}>
         <video
-          ref={videoRef}  // Ajoutez cette ligne
+          ref={videoRef}
           className={styles.video} loop controls>
           <source src="/teaser.mp4" type="video/mp4" />
           Votre navigateur ne supporte pas la vidéo.
@@ -122,24 +121,24 @@ export default function Home() {
       </section>
       <section className={styles.about}>
         <div className={styles.leftcontent}>
-          <h3>{t('about.sectionTitle')}</h3>
+          <h2>{t('about.sectionTitle')}</h2>
         </div>
 
         <div className={styles.rightcontent}>
           <p>
             {t('about.paragraph')}
           </p>
-          <h4>
+          <p className={styles.highlight}>
             {t('about.allaudience')}
             <br />
             {t('about.ticketInfo')}
-          </h4>
+          </p>
           <Link href="/billetterie" className="button">
             {t('about.reserveButton')} →
           </Link>
           <div className={styles.image}>
             <Image
-              src="/alberteinstein.jpg"
+              src="/alberteinstein.webp"
               alt="Albert Einstein"
               width={500}
               height={500}

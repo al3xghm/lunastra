@@ -52,11 +52,12 @@ export default function Billetterie() {
         <>
             <Head>
                 <title>{t('ticketing.titlepage')}</title>
+                <meta name="description" content={t('ticketing.description')} />
             </Head>
             <Navbar />
             <main className={styles.mainContent}>
                 <div className={styles.twodiv}>
-                    <Image src="/affiche.jpg" alt="Billetterie" width={800} height={600} className={styles.image} />
+                    <Image src="/affiche.webp" alt="Billetterie" width={800} height={600} className={styles.image} />
                     <form onSubmit={handleSubmit} className={styles.form}>
                         <div className={styles.header}>
                             <h2>{t('ticketing.title')}</h2>

@@ -12,6 +12,7 @@ const MentionsLegales = () => {
         <>
             <Head>
                 <title>{t('legal.title')}</title>
+                <meta name="description" content={t('legal.description')} />
             </Head>
 
             <Navbar />

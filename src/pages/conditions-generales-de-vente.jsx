@@ -12,12 +12,12 @@ const ConditionsGeneralesDeVente = () => {
         <>
             <Head>
                 <title>{t('title')}</title>
+                <meta name="description" content={t('title')} />
             </Head>
             <Navbar />
             <div className={styles.cgv}>
                 <section>
                     <h1>{t('title')}</h1>
-                    <meta name="description" content={t('title')} />
 
                     <p><b>{t('intro')}</b></p>
                     <br />

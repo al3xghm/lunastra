@@ -250,6 +250,7 @@ const Exposition = () => {
         <>
             <Head>
                 <title>{t('exhibition.title')}</title>
+                <meta name="description" content={t('exhibition.description')} />
             </Head>
             <Navbar />
             <div className={styles.enterExperience} id='enterButton'>
